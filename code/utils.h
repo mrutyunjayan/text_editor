@@ -1,5 +1,8 @@
 /* date = October 9th 2020 11:00 am */
 
+// NOTE(Jai): A lot of the structure of this utils file is inspired by
+// the work of Casey Muratori and Allen Webster (aka Mr.4thDimension)
+
 #ifndef UTILS_H
 #define UTILS_H
 
@@ -147,9 +150,6 @@
 #else
 #error no context cracking for this compiler
 #endif // COMPILER
-
-// NOTE(Jai): A lot of the structure of this utils file is inspired by
-// the work of Casey Muratori and Allen Webster (aka Mr.4thDimension)
 
 //~ TYPEDEFS
 // NOTE(Jai): Typedefs for stdint types for brevity
@@ -376,7 +376,7 @@ global char month_String[12][10] = {
     { "May\0" },
     { "June\0" },
     { "July\0" },
-    { "August "},
+    { "August\0 "},
     { "September\0" },
     { "October\0" },
     { "November\0" },
@@ -449,6 +449,17 @@ if ((first) == (last)) { (first) = (last) = 0; }\
 else { (first) = (first)->next; }\
 } while(0)
 #define SLL_QUEUE_POP(first, last) SLL_QUEUE_POP_N(first, last, next)
+
+#define SLL_STACK_PUSH_N(first, last, node, next) do {\
+(node)->next = (first);\
+(first) = (node);\
+} while(0)
+#define SLL_STACK_PUSH(first, last, node) SLL_STACK_PUSH_N(first, last, node, next)
+#define SLL_STACK_POP_N(first, last, next) do {\
+if((first) == 0) { break; }\
+else { (first) = (first)->next; }\
+} while(0)
+#define SLL_STACK_POP(first, last) SLL_STACK_POP_N(first, last, next)
 
 //~ STRING STUFF
 // NOTE(Jai): Concatenate two strings
