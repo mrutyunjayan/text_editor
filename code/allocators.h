@@ -21,7 +21,7 @@ typedef struct alloc_BaseMemory {
 
 //- Base Memory Helper Functions
 internal void
-alloc_changeMemoryNoop(void* ptr,
+alloc_changeMemoryNOOP(void* ptr,
                        u64 size);
 
 //- Malloc Wrappers
@@ -54,14 +54,17 @@ alloc_baseMemory_use_malloc(void);
 // ARENA_PUSH_ARRAYALIGNED(arena, count, type, align)
 // Finally, free the arena by using alloc_arena_free(Arena* arena)
 
-typedef struct {
-	u8* buffer; // Pointer to the buffer, must point to an allocated block of
-	//             memory on initiliazation
-    memoryIndex bufferSize; // Size of the buffer in bytes
-    memoryIndex currentOffset; // The current offset to the end of the used memory, initialize to zero
-    memoryIndex memoryBlockStart; // The previous offset, set using function, initialize to zero
-} Arena;
-
+// NOTE(Jai): Arena as defined in "utils.h"
+//typedef struct Arena {
+//        u8* buffer; // Pointer to the buffer, must point to an allocated block of
+//                       memory on initiliazation
+//        memoryIndex bufferSize; // Size of the buffer in bytes
+//        memoryIndex currentOffset; // The current offset to the end of the used memory,
+//                                      initialize to zero
+//        memoryIndex memoryBlockStart; // The previous offset, set using function,
+//                                         initialize to zero
+//} Arena;
+//
 
 internal uintptr
 alloc_arena_alignForward(uintptr ptr,
@@ -90,9 +93,10 @@ alloc_arena_initialize(Arena* arena,
                        memoryIndex backingBufferLength);
 internal void
 alloc_arena_free(Arena* arena);
+#endif //ALLOCATORS_H
 
-//~ ___ IMPLEMENTATION ___
 #if defined (JAI_ALLOCATORS_IMPLEMENTATION)
+//~ ___ IMPLEMENTATION ___
 
 //- Base Memory
 
@@ -254,6 +258,16 @@ alloc_arena_initialize(Arena* arena,
     arena->memoryBlockStart = 0;
 }
 
+internal void
+alloc_zeroSize(memoryIndex size,
+               void* ptr) {
+    u8* byte = (u8*)ptr;
+    while(size--) {
+        *byte++ = 0;
+    }
+}
+#define ZERO_STRUCT(instance) alloc_zeroSize(sizeof(instance), &(instance))
+
 // NOTE(Jai): Completely frees the arena
 internal void
 alloc_arena_free(Arena* arena) {
@@ -261,6 +275,6 @@ alloc_arena_free(Arena* arena) {
 	arena->memoryBlockStart = 0;
 }
 
+#undef JAI_ALLOCATORS_IMPLEMENTATION
 #endif // IMPLEMENTATION
 
-#endif //ALLOCATORS_H

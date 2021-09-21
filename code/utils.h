@@ -30,23 +30,23 @@
 #define ARCH_ARM 0
 #define ARCH_ARM64 0
 
-#if defined(__clang__)
+#if defined (__clang__)
 #undef COMPILER_CLANG
 #define COMPILER_CLANG 1
 #if defined (_WIN32)
 #undef OS_WINDOWS
 #define OS_WINDOWS 1
 
-#if defined(__amd64__)
+#if defined (__amd64__)
 #undef ARCH_X64
 #define ARCH_X64 1
-#elif defined(__i386__)
+#elif defined (__i386__)
 #undef ARCH_X86
 #define ARCH_X86 1
-#elif defined(__arm__)
+#elif defined (__arm__)
 #undef ARCH_ARM
 #define ARCH_ARM 1
-#elif defined(__aarch64__)
+#elif defined (__aarch64__)
 #undef ARCH_ARM64
 #define ARCH_ARM64 1
 #else
@@ -57,16 +57,16 @@
 #undef OS_LINUX
 #define OS_LINUX 1
 
-#if defined(__amd64__)
+#if defined (__amd64__)
 #undef ARCH_X64
 #define ARCH_X64 1
-#elif defined(__i386__)
+#elif defined (__i386__)
 #undef ARCH_X86
 #define ARCH_X86 1
-#elif defined(__arm__)
+#elif defined (__arm__)
 #undef ARCH_ARM
 #define ARCH_ARM 1
-#elif defined(__aarch64__)
+#elif defined (__aarch64__)
 #undef ARCH_ARM64
 #define ARCH_ARM64 1
 #else
@@ -77,20 +77,20 @@
 #error missing OS detection
 #endif // OS
 
-#elif defined(_MSC_VER)
+#elif defined (_MSC_VER)
 #undef COMPILER_CL
 #define COMPILER_CL 1
 #if defined (_WIN32)
 #undef OS_WINDOWS
 #define OS_WINDOWS 1
 
-#if defined(_M_AMD64)
+#if defined (_M_AMD64)
 #undef ARCH_X64
 #define ARCH_X64
-#elif defined(_M_IX86)
+#elif defined (_M_IX86)
 #undef ARCH_X86
 #define ARCH_X86 1
-#elif defined(_M_ARM)
+#elif defined (_M_ARM)
 #undef ARCH_ARM
 #define ARCH_ARM 1
 #else
@@ -101,23 +101,23 @@
 #error missing OS detection
 #endif // OS
 
-#elif defined(__GNUC__)
+#elif defined (__GNUC__)
 #undef COMPILER_GCC
 #define COMPILER_GCC 1
 #if defined (_WIN32)
 #undef OS_WINDOWS
 #define OS_WINDOWS 1
 
-#if defined(__amd64__)
+#if defined (__amd64__)
 #undef ARCH_X64
 #define ARCH_X64 1
-#elif defined(__i386__)
+#elif defined (__i386__)
 #undef ARCH_X86
 #define ARCH_X86 1
-#elif defined(__arm__)
+#elif defined (__arm__)
 #undef ARCH_ARM
 #define ARCH_ARM 1
-#elif defined(__aarch64__)
+#elif defined (__aarch64__)
 #undef ARCH_ARM64
 #define ARCH_ARM64 1
 #else
@@ -127,16 +127,16 @@
 #undef OS_LINUX
 #define OS_LINUX 1
 
-#if defined(__amd64__)
+#if defined (__amd64__)
 #undef ARCH_X64
 #define ARCH_X64 1
-#elif defined(__i386__)
+#elif defined (__i386__)
 #undef ARCH_X86
 #define ARCH_X86 1
-#elif defined(__arm__)
+#elif defined (__arm__)
 #undef ARCH_ARM
 #define ARCH_ARM 1
-#elif defined(__aarch64__)
+#elif defined (__aarch64__)
 #undef ARCH_ARM64
 #define ARCH_ARM64 1
 #else
@@ -176,12 +176,6 @@ typedef size_t memoryIndex;
 // NOTE(Jai): To differntiate between function pointers and data pointers
 typedef void void_function(void);
 
-// NOTE(Jai): Because C does not have an in-built String type
-typedef struct String8 {
-    char* str;
-    memoryIndex length;
-} String8;
-
 //~ MACROS
 
 #define localPersist static
@@ -201,7 +195,7 @@ typedef struct String8 {
 #define STMT(s) do { (s) } while (0)
 
 #define ASSERT_BREAK(expression)\
-if(!(expression)) {\
+if (!(expression)) {\
 *(volatile int*)0 = 0;\
 }
 #if JAI_INTERNAL
@@ -383,7 +377,6 @@ global char month_String[12][10] = {
     { "December\0" },
 };
 
-
 //- SYMBOLIC CONSTANT FUNCTIONS
 internal OperatingSystem
 operatinSystemFromContext(void);
@@ -423,7 +416,7 @@ stringFromDayOfWeek(DayOfWeek dayOfWeek);
 #define DLL_PUSH_BACK_NP(first, last, node, next, prev) do {\
 if ((first) == 0) { (first) = (last) = (node); (node)->next = 0; (node)->prev = 0; }\
 else { (node)->prev = (last); (last)->next = (node); (last) = (node); (node)->next = 0; }\
-} while(0)
+} while (0)
 #define DLL_PUSH_BACK(first, last, node) DLL_PUSH_BACK_NP(first, last, node, next, prev)
 #define DLL_PUSH_FRONT(first, last, node) DLL_PUSH_BACK_NP(last, first, node, prev, next)
 #define DLL_REMOVE_NP(first, last, node, next, prev) do {\
@@ -431,43 +424,116 @@ if (((first) == (last)) && ((first) == (node))) { (first) = (last) = 0; }\
 else if ((node) == (first)) { (first) = (node)->next; (first)->prev = 0;}\
 else if ((node) == (last)) { (last) = (node)->prev; (last)->next = 0; }\
 else { (node)->prev->next = (node)->next; (node)->next->prev = (node)->prev; }\
-} while(0)
+} while (0)
 #define DLL_REMOVE(first, last, node) DLL_REMOVE_NP(first, last, node, next,prev)
 
 #define SLL_QUEUE_PUSH_N(first, last, node, next) do {\
 if ((first) == 0) { (first) = (last) = (node);}\
 else { (last)->next = (node); (last) = (node); (node)->next = 0; }\
-} while(0)
+} while (0)
 #define SLL_QUEUE_PUSH(first, last, node) SLL_QUEUE_PUSH_N(first, last, node, next)
 #define SLL_QUEUE_PUSH_FRONT_N(first, last, node, next) do {\
 if ((first) == 0) { (first) = (last) = (node); }\
 else { (node)->next = (first); (first) = (node); }\
-} while(0)
+} while (0)
 #define SLL_QUEUE_PUSH_FRONT(first, last, node) SLL_QUEUE_PUSH_FRONT_N(first, last, node, next)
 #define SLL_QUEUE_POP_N(first, last, next) do {\
 if ((first) == (last)) { (first) = (last) = 0; }\
 else { (first) = (first)->next; }\
-} while(0)
+} while (0)
 #define SLL_QUEUE_POP(first, last) SLL_QUEUE_POP_N(first, last, next)
 
 #define SLL_STACK_PUSH_N(first, last, node, next) do {\
 (node)->next = (first);\
 (first) = (node);\
-} while(0)
+} while (0)
 #define SLL_STACK_PUSH(first, last, node) SLL_STACK_PUSH_N(first, last, node, next)
 #define SLL_STACK_POP_N(first, last, next) do {\
-if((first) == 0) { break; }\
+if ((first) == 0) { break; }\
 else { (first) = (first)->next; }\
-} while(0)
+} while (0)
 #define SLL_STACK_POP(first, last) SLL_STACK_POP_N(first, last, next)
 
+//~ ARENA DEFINITION
+typedef struct Arena {
+	u8* buffer; // Pointer to the buffer, must point to an allocated block of
+	//             memory on initiliazation
+    memoryIndex bufferSize; // Size of the buffer in bytes
+    memoryIndex currentOffset; // The current offset to the end of the used memory, initialize to zero
+    memoryIndex memoryBlockStart; // The previous offset, set using function, initialize to zero
+} Arena;
+
+
 //~ STRING STUFF
-// NOTE(Jai): Concatenate two strings
+
+// NOTE(Jai): Because C does not have an in-built String type
+// NOTE(Jai): Str8 is assumed to be a constant and is not to be mutated.
+typedef struct Str8 {
+    char* str;
+    memoryIndex length;
+} Str8;
+
+typedef struct Str8Node Str8Node;
+struct Str8Node {
+    Str8Node* next;
+    Str8 string;
+};
+
+typedef struct Str8List {
+    Str8Node* first;
+    Str8Node* last;
+    u64 nodeCount;
+    u64 totalSize;
+} Str8List;
+
+internal Str8
+str8_init(u8* str, memoryIndex size);
+internal Str8
+str8_range(u8* first, u8* opl);
+internal Str8
+str8_cstr(u8* cstr);
+internal Str8
+str8_prefix(Str8 str, memoryIndex size);
+internal Str8
+str8_chop(Str8 str, memoryIndex amount);
+internal Str8
+str8_postfix(Str8 str, memoryIndex size);
+internal Str8
+str8_skip(Str8 str, memoryIndex amount);
+internal Str8
+str8_substr(Str8 str,
+            memoryIndex first, memoryIndex opl);
+#if 0
+internal void
+str8_join(Arena* arena,
+          Str8List* list,
+          StringJoin* optionalJoin);
+#endif
+internal void
+str8_split(Arena* arena,
+           Str8 string,
+           u8* splitCharacters,
+           u32 count);
+
+internal void
+str8List_push_explicit(Str8List* list,
+                       Str8 string,
+                       Str8Node* nodeMemory);
+internal void
+str8List_push(Arena* arena,
+              Str8List* list,
+              Str8 string);
+
+
+#define STR8_LITERAL(s) str8_init((u8*)(s), sizeof(s) - 1)
+#define STR8_EXPAND(s) (i32)((s).size), ((s).str)
+
+// NOTE(Jai): Concatenate two cstrings
 internal inline void
 catStrings(i64 sourceACount, char* sourceA,
            i64 sourceBCount, char* sourceB,
            i64 destCount, char* dest);
-// NOTE(Jai): Find the length of a string
+// NOTE(Jai): Find the length of a cstring
 internal inline i32
 stringLength(char* string);
 
@@ -482,7 +548,7 @@ u8 _swapTemp[(sizeof(a) == sizeof(b)) ? sizeof(a) : -1]; \
 memcpy(_swapTemp, &a, sizeof(a)); \
 memcpy(&a, &b, sizeof(a)); \
 memcpy(&b, _swapTemp, sizeof(a)); \
-} while(0)
+} while (0)
 
 
 //~----------- Number Stuff ----------------
@@ -517,8 +583,10 @@ jai_strtoll(readOnly char* str, char** endPtr, i32 base);
 internal inline f32
 jai_strtof(readOnly char* str, char** endPtr);
 
+#endif //UTILS_H
+
+#if defined (JAI_UTILS_IMPLEMENTATION)
 //~ IMPLEMENTATION
-#if defined(JAI_UTILS_IMPLEMENTATION)
 
 //- SYMBOLIC CONSTANT FUNCTIONS
 
@@ -573,11 +641,70 @@ stringFromDayOfWeek(DayOfWeek dayOfWeek) {
 }
 //- STRING STUFF
 
+
+internal Str8
+str8_init(u8* str, memoryIndex size);
+internal Str8
+str8_range(u8* first, u8* opl);
+internal Str8
+str8_cstr(u8* cstr);
+
+internal Str8
+str8_prefix(Str8 str, memoryIndex size) {
+    memoryIndex clampedSize = CLAMP_TOP(size, str.length);
+    Str8 result = {
+        str.str,
+        clampedSize
+    };
+    
+    return result;
+}
+
+internal Str8
+str8_chop(Str8 str, memoryIndex amount) {
+    memoryIndex clampedAmount = CLAMP_TOP(amount, str.length);
+    memoryIndex remainingSize = str.length - clampedAmount;
+    Str8 result = {
+        str.str,
+        remainingSize
+    };
+    
+    return result;
+}
+
+internal Str8
+str8_postfix(Str8 str, memoryIndex size) {
+    memoryIndex clampedSize = CLAMP_TOP(size, str.length);
+    memoryIndex skipTo = str.length - clampedSize;
+    Str8 result = {
+        (char*)(str.length + skipTo),
+        clampedSize
+    };
+    
+    return result;
+}
+
+internal Str8
+str8_skip(Str8 str, memoryIndex amount) {
+    memoryIndex clampedAmount = CLAMP_TOP(str.length, amount);
+    memoryIndex remainingSize = str.length - clampedAmount;
+    Str8 result = {
+        str.length + (char*)clampedAmount,
+        remainingSize
+    };
+    
+    return result;
+}
+internal Str8
+str8_substr(Str8 str,
+            memoryIndex first, memoryIndex opl);
+
 // NOTE(Jai): Concatenate two strings
 internal inline void
 catStrings(i64 sourceACount, char* sourceA,
            i64 sourceBCount, char* sourceB,
            i64 destCount, char* dest) {
+    // TODO(Jai): dest bounds checking
     // TODO(Jai): dest bounds checking
     for (int i = 0; i < sourceACount; ++i) {
         *dest++ = *sourceA++;
@@ -622,11 +749,11 @@ floor_floatToI32(f32 number) {
 internal inline u32
 rgba_to_hex(u32 red, u32 green, u32 blue, u32 alpha) {
     u32 result = alpha << 24
-		| red << 16
+        | red << 16
         | green << 8
         | blue  << 0;
     
-	return result;
+    return result;
 }
 
 //- Truncate
@@ -653,6 +780,6 @@ jai_strtof(readOnly char* str, char** endPtr) {
     return strtof(str, endPtr);
 }
 
+#undef JAI_UTILS_IMPLEMENTATION
 #endif // IMPLEMENTATION
 
-#endif //UTILS_H
