@@ -13,18 +13,76 @@ global b32 running = false;
 global f32 opacity = 0.95f;
 global win32_Backbuffer win32_backbuffer = { .pixelStride = 4 };
 
-//~ LOAD APP LIBRARY
+//~ LOAD APP DLL
 
-#if 0
-internal win32_AppCode
-win32_loadAppLibrary() {
-    win32_AppCode result = {
-        .updateAndRender = (app_updateAndRender*)jed_updateAndRender
-    };
+internal void
+win32_buildExePathFileName(win32_State* state,
+                           char* fileName,
+                           i32 destCount,
+                           char* dest) {
+    catStrings(state->onePastLastSlash - state->exeFileName,
+               state->exeFileName,
+               stringLength(fileName), fileName,
+               destCount, dest);
+}
+
+internal void
+win32_getExeFileName(win32_State* state) {
+    DWORD fileNameSize = GetModuleFileNameA(0,
+                                            state->exeFileName,
+                                            sizeof(state->exeFileName));
+    state->onePastLastSlash = state->exeFileName;
+    for (char* scan = state->exeFileName; *scan; ++scan) {
+        if (*scan == '\\') {
+            state->onePastLastSlash = scan + 1;
+        }
+    }
+    
+}
+
+internal FILETIME
+win32_getLastWriteTime(char* fileName) {
+    FILETIME result = {0};
+    
+    WIN32_FILE_ATTRIBUTE_DATA data;
+    if (GetFileAttributesEx(fileName, GetFileExInfoStandard, &data)) {
+        result = data.ftLastWriteTime;
+    }
     
     return result;
 }
-#endif
+
+internal win32_AppCode
+win32_loadAppDLL(char* sourceDLLName,
+                 char* tempDLLName,
+                 char* lockFileName) {
+    win32_AppCode result = {0};
+    
+    WIN32_FILE_ATTRIBUTE_DATA ignored;
+    if (!GetFileAttributesEx(lockFileName, GetFileExInfoStandard, &ignored)) {
+        result.lastModifiedTime = win32_getLastWriteTime(sourceDLLName);
+        CopyFile(sourceDLLName, tempDLLName, FALSE);
+        result.appDLL = LoadLibraryA(tempDLLName);
+        
+        if (result.appDLL) {
+            result.updateAndRender 
+                = (app_updateAndRender*)GetProcAddress(result.appDLL, "jed_updateAndRender");
+            result.isValid = true;
+        }
+    }
+    
+    return result;
+}
+
+internal void
+win32_unloadAppCode(win32_AppCode* appCode) {
+    if (appCode->appDLL) {
+        FreeLibrary(appCode->appDLL);
+        appCode->appDLL = 0;
+    }
+    appCode->isValid = false;
+    appCode->updateAndRender = 0;
+}
 
 //~ WINDOWING
 
@@ -251,7 +309,6 @@ win32_file_writeFull(char* fileName,
     return result;
 }
 
-#if 1
 //~ MAIN
 int CALLBACK
 WinMain(HINSTANCE instance,
@@ -259,6 +316,21 @@ WinMain(HINSTANCE instance,
         LPSTR cmdLine,
         int cmdShow) {
     win32_State platformState = {0};
+    
+    win32_getExeFileName(&platformState);
+    char appDLLFullPath[MAX_PATH];
+    char tempDLLFullPath[MAX_PATH];
+    char lockFullPath[MAX_PATH];
+    win32_buildExePathFileName(&platformState,
+                               "jed.dll",
+                               sizeof(appDLLFullPath), appDLLFullPath);
+    win32_buildExePathFileName(&platformState,
+                               "jed_temp.dll",
+                               sizeof(tempDLLFullPath), tempDLLFullPath);
+    win32_buildExePathFileName(&platformState,
+                               "lock.tmp",
+                               sizeof(lockFullPath), lockFullPath);
+    
     
     WNDCLASSA windowClass = {
         .lpfnWndProc =  win32_mainWindowCallback,
@@ -314,11 +386,29 @@ WinMain(HINSTANCE instance,
         .fileWriteFull = (platformFileWriteFull*)win32_file_writeFull
     };
     
+    if (!appMemory.persistentStorage || !appMemory.transientStorage) {
+        // TODO(Jai): Logging
+    }
+    
+    win32_AppCode app = win32_loadAppDLL(appDLLFullPath,
+                                         tempDLLFullPath,
+                                         lockFullPath);
+    u32 loadCounter = 0;
     
     jed_Input appInput = {0};
     
     running =  true;
     while (running) {
+        FILETIME newDLLWriteTime = win32_getLastWriteTime(appDLLFullPath);
+        if (CompareFileTime(&newDLLWriteTime,
+                            &app.lastModifiedTime) != 0) {
+            win32_unloadAppCode(&app);
+            app = win32_loadAppDLL(appDLLFullPath,
+                                   tempDLLFullPath,
+                                   lockFullPath);
+            loadCounter = 0;
+        }
+        
         win32_processWindowMessages();
         jed_Backbuffer appBackbuffer = {
             .pixels = win32_backbuffer.memory,
@@ -327,9 +417,11 @@ WinMain(HINSTANCE instance,
             .pitch = win32_backbuffer.pitch,
             .pixelStride = win32_backbuffer.pixelStride
         };
-        jed_updateAndRender(&appMemory,
-                            &appBackbuffer,
-                            &appInput);
+        if (app.updateAndRender) {
+            app.updateAndRender(&appMemory,
+                                &appBackbuffer,
+                                &appInput);
+        }
         
         HDC deviceContext = GetDC(window);
         win32_WindowDimensions windowDimensions = win32_window_getDimensions(window);
@@ -340,60 +432,3 @@ WinMain(HINSTANCE instance,
     
     return 0;
 }
-#else
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-#pragma clang diagnostic ignored "-Wpointer-sign"
-#pragma clang diagnostic ignored "-Wimplicit-int-float-conversion"
-#pragma clang diagnostic ignored "-Wdouble-promotion"
-global char buffer[24<<20];
-global unsigned char screen[20][79];
-
-int main(int arg, char **argv)
-{
-    stbtt_fontinfo font;
-    int i,j,ascent,baseline,ch=0;
-    float scale, xpos=2; // leave a little padding in case the character extends left
-    char *text = "Heljo World!"; // intentionally misspelled to show 'lj' brokenness
-    
-    fread(buffer, 1, 1000000, fopen("C:/Users/Nandu/Downloads/rbm/RobotoMono-Regular.ttf", "rb"));
-    stbtt_InitFont(&font, buffer, 0);
-    
-    scale = stbtt_ScaleForPixelHeight(&font, 15);
-    stbtt_GetFontVMetrics(&font, &ascent,0,0);
-    baseline = (int) (ascent*scale);
-    
-    while (text[ch]) {
-        int advance,lsb,x0,y0,x1,y1;
-        float x_shift = xpos - (float) floor(xpos);
-        stbtt_GetCodepointHMetrics(&font, text[ch], &advance, &lsb);
-        stbtt_GetCodepointBitmapBoxSubpixel(&font, text[ch], scale,scale,x_shift,0, &x0,&y0,&x1,&y1);
-        stbtt_MakeCodepointBitmapSubpixel(&font,
-                                          &screen[baseline + y0][(int) xpos + x0],
-                                          x1 - x0, y1 - y0,
-                                          79,
-                                          scale, scale,
-                                          x_shift, 0,
-                                          text[ch]);
-        // note that this stomps the old data, so where character boxes overlap (e.g. 'lj') it's
-        //wrong
-        // because this API is really for baking character bitmaps into textures. if you want to
-        //render
-        // a sequence of characters, you really need to render each bitmap to a temp buffer, then
-        // "alpha blend" that into the working buffer
-        xpos += (advance * scale);
-        if (text[ch+1])
-            xpos += scale*stbtt_GetCodepointKernAdvance(&font, text[ch],text[ch+1]);
-        ++ch;
-    }
-    
-    for (j=0; j < 20; ++j) {
-        for (i=0; i < 78; ++i)
-            putchar(" .:ioVM@"[screen[j][i]>>5]);
-        putchar('\n');
-    }
-    
-    return 0;
-}
-#pragma clang diagnostic pop
-#endif

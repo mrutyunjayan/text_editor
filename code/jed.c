@@ -1,4 +1,4 @@
-#include "jed.h"
+#include "platform.h"
 
 global jed_FileIO fileIO = {0};
 
@@ -212,27 +212,28 @@ font_load(Arena* arena,
           char* fontFileFullName,
           f32 size) {
     FontGlyphSet result = {
-        .glyphs = ARENA_PUSH_ARRAY(arena, 95, Bitmap),
-        .advanceWidth =  ARENA_PUSH_ARRAY(arena, 95, i32),
-        .leftSideBearing = ARENA_PUSH_ARRAY(arena, 95, i32),
-        .xOffset = ARENA_PUSH_ARRAY(arena, 95, i32),
-        .yOffset = ARENA_PUSH_ARRAY(arena, 95, i32),
+        .glyphs = ARENA_PUSH_ARRAY(arena, 96, Bitmap),
+        .advanceWidth =  ARENA_PUSH_ARRAY(arena, 96, i32),
+        .leftSideBearing = ARENA_PUSH_ARRAY(arena, 96, i32),
+        .xOffset = ARENA_PUSH_ARRAY(arena, 96, i32),
+        .yOffset = ARENA_PUSH_ARRAY(arena, 96, i32),
     };
     
     FileReadResult ttfFile = fileIO.readFull(fontFileFullName);
     if (ttfFile.contentSize) {
+        result.ttfFile = &ttfFile;
         u8 tempBuffer[100*100];
-        stbtt_fontinfo* fontInfo = &result.fontInfo;
-        stbtt_InitFont(fontInfo, ttfFile.contents, 0);
-        result.scale = stbtt_ScaleForPixelHeight(fontInfo, size);
+        stbtt_fontinfo fontInfo = {0};
+        stbtt_InitFont(&fontInfo, ttfFile.contents, 0);
+        result.fontInfo = fontInfo;
+        result.scale = stbtt_ScaleForPixelHeight(&fontInfo, size);
         f32 scale = result.scale;
-        stbtt_GetFontVMetrics(fontInfo, &result.ascent, &result.descent, &result.lineGap);
-        result.ascent = (i32)(round_floatToI32((f32)result.ascent * scale));
-        result.descent = (i32)(round_floatToI32((f32)result.descent * scale));
+        i32 ascent, descent;
+        stbtt_GetFontVMetrics(&fontInfo, &ascent, &descent, &result.lineGap);
+        result.ascent = (i32)(round_floatToI32((f32)ascent * scale));
         result.lineGap = (i32)(round_floatToI32((f32)result.lineGap * scale));
-        i32 baseline = round_floatToI32((f32)result.ascent * result.scale);
         
-        for (i32 codepoint = '!'; codepoint <= '~'; codepoint++) {
+        for (i32 codepoint = ' '; codepoint <= '~'; codepoint++) {
             i32 fontIndex = codepoint - 33;
             i32* advanceWidth = &result.advanceWidth[fontIndex];
             i32* leftSideBearing = &result.leftSideBearing[fontIndex];
@@ -241,12 +242,12 @@ font_load(Arena* arena,
             i32 width = 0;
             i32 height = 0;
             
-            stbtt_GetCodepointHMetrics(fontInfo,
+            stbtt_GetCodepointHMetrics(&fontInfo,
                                        codepoint,
                                        advanceWidth, leftSideBearing);
             *advanceWidth = (i32)(round_floatToI32((f32)*advanceWidth * scale));
             *leftSideBearing = (i32)(round_floatToI32((f32)*leftSideBearing * scale));
-            u8* monoBitmap = stbtt_GetCodepointBitmap(fontInfo,
+            u8* monoBitmap = stbtt_GetCodepointBitmap(&fontInfo,
                                                       0, scale,
                                                       codepoint,
                                                       &width, &height,
@@ -263,41 +264,67 @@ font_load(Arena* arena,
             }
             
             result.glyphs[fontIndex] = bitmap;
+            stbtt_FreeBitmap(monoBitmap, 0);
         }
     }
     
     return result;
 }
 
-global u32 global_baseline =  300;
-global u32 characterCurrentPoint = 50;
-
 internal void
 displayCodepointGlyph(jed_Backbuffer* videoBackbuffer,
                       FontGlyphSet fontGlyphSet,
-                      u8 codepoint){
-    i32 fontIndex = codepoint - 33;
-    i32 advanceWidth = fontGlyphSet.advanceWidth[fontIndex];
-    i32 leftSideBearing = fontGlyphSet.leftSideBearing[fontIndex];
-    i32 xOffset = fontGlyphSet.xOffset[fontIndex];
-    i32 yOffset = fontGlyphSet.yOffset[fontIndex];
-    i32 ascent = fontGlyphSet.ascent;
-    u32 width = fontGlyphSet.glyphs[fontIndex].width;
-    u32 height = fontGlyphSet.glyphs[fontIndex].height;
-    
-    u32* source = fontGlyphSet.glyphs[fontIndex].pixels;
-    u8* destRow = (u8*)((u32*)videoBackbuffer->pixels
-                        + characterCurrentPoint
-                        + (global_baseline + (u32)yOffset) * videoBackbuffer->width);
-    for (u32 y = 0; y < height; y++) {
-        u32* dest = (u32*)destRow;
-        for (u32 x = 0; x < width; x++) {
-            *dest++ = *source++;
+                      u32* row, i32* col,
+                      char codepoint) {
+    i32 advanceWidth = 0;
+    if (codepoint == ' ') {
+        advanceWidth = fontGlyphSet.advanceWidth[0];
+    } else {
+        i32 fontIndex = codepoint - 33;
+        advanceWidth = fontGlyphSet.advanceWidth[fontIndex];
+        i32 leftSideBearing = fontGlyphSet.leftSideBearing[fontIndex];
+        i32 xOffset = fontGlyphSet.xOffset[fontIndex];
+        i32 yOffset = fontGlyphSet.yOffset[fontIndex];
+        u32 width = fontGlyphSet.glyphs[fontIndex].width;
+        u32 height = fontGlyphSet.glyphs[fontIndex].height;
+        
+        u32* source = fontGlyphSet.glyphs[fontIndex].pixels;
+        u8* destRow = (u8*)((u32*)videoBackbuffer->pixels
+                            + *col
+                            + (*row + (u32)yOffset) * videoBackbuffer->width);
+        for (u32 y = 0; y < height; y++) {
+            u32* dest = (u32*)destRow;
+            for (u32 x = 0; x < width; x++) {
+                *dest++ = *source++;
+            }
+            destRow += videoBackbuffer->pitch;
         }
-        destRow += videoBackbuffer->pitch;
     }
     
-    characterCurrentPoint += (u32)advanceWidth;
+    if ((u32)(*col + (i32)fontGlyphSet.glyphs[0].width * 2) > videoBackbuffer->width) {
+        *row += (u32)(fontGlyphSet.lineGap + fontGlyphSet.ascent);
+        *col = 0;
+    } else {
+        *col += advanceWidth;
+    }
+}
+
+// TODO(Jai): Alpha blend the character when advancing by kerning
+internal void
+render_string(jed_Backbuffer* videoBackbuffer,
+              FontGlyphSet fontGlyphSet,
+              u32* row, i32* col,
+              Str8 string) {
+    stbtt_fontinfo* fontInfo = &fontGlyphSet.fontInfo;
+    for (i32 i = 0; i < (i32)string.length - 1; i++) {
+        char ch1 = string.str[i];
+        char ch2 = string.str[i + 1];
+        displayCodepointGlyph(videoBackbuffer, fontGlyphSet, row, col, ch1);
+        i32 kerning = stbtt_GetCodepointKernAdvance(fontInfo, ch1, ch2);
+        kerning += round_floatToI32(fontGlyphSet.scale * (f32)kerning);
+        *col += kerning;
+    }
+    displayCodepointGlyph(videoBackbuffer, fontGlyphSet, row, col, string.str[string.length - 1]);
 }
 
 #if 0
@@ -317,45 +344,22 @@ UPDATE_AND_RENDER(jed_updateAndRender) {
         alloc_arena_initialize(&editorState->arena,
                                (u8*)memory->persistentStorage + sizeof(EditorState),
                                memory->persistentStorageSize - sizeof(EditorState));
-        //char fontFileFullName[255] = "C:/Windows/Fonts/arial.ttf";
-        char fontFileFullName[255] = "C:/Users/Nandu/Downloads/rbm/RobotoMono-Regular.ttf";
+        char fontFileFullName[255] = "C:/Windows/Fonts/arialbd.ttf";
+        //char fontFileFullName[255] = "C:/Users/Nandu/Downloads/rbm/RobotoMono-Regular.ttf";
         editorState->fontGlyphSet = font_load(&editorState->arena,
                                               fontFileFullName,
                                               48.0f);
+        editorState->row = (u32)editorState->fontGlyphSet.ascent;
+        editorState->col = 0;
     }
     
-#if 0
-    // NOTE(Jai): Draw Baseline for debugging
-    u8* destRow = (u8*)((u32*)videoBackbuffer->pixels
-                        + ((u32)global_baseline * videoBackbuffer->width));
-    u32* dest = (u32*)destRow;
-    for (u32 x = 0; x < videoBackbuffer->width; x++) {
-        *dest++ = 0xFFFFFF00;
-    }
-#endif
-    for (u8 codepoint = 'a'; codepoint < 'z'; codepoint++) {
-        displayCodepointGlyph(videoBackbuffer,
-                              editorState->fontGlyphSet,
-                              codepoint);
-    }
+    Str8 test = STR8_LITERAL("Hello!, I am JED. !@#$%^&*().................................................................");
+    render_string(videoBackbuffer,
+                  editorState->fontGlyphSet,
+                  &editorState->row, &editorState->col,
+                  test);
     
-    global_baseline += 50;
-    characterCurrentPoint = 50;
-    for (u8 codepoint = 'A'; codepoint < 'Z'; codepoint++) {
-        displayCodepointGlyph(videoBackbuffer,
-                              editorState->fontGlyphSet,
-                              codepoint);
-    }
-    
-    global_baseline += 50;
-    characterCurrentPoint = 50;
-    for (u8 codepoint = '!'; codepoint < 'A'; codepoint++) {
-        displayCodepointGlyph(videoBackbuffer,
-                              editorState->fontGlyphSet,
-                              codepoint);
-    }
-    
-    global_baseline = 300;
-    characterCurrentPoint = 50;
-    int y = 0;
+    editorState->row = (u32)editorState->fontGlyphSet.ascent;
+    editorState->col = 0;
+    i32 y = 0;
 }

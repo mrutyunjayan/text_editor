@@ -3,7 +3,6 @@
 #ifndef WIN32_MAIN_H
 #define WIN32_MAIN_H
 
-#define JAI_UTILS_IMPLEMENTATION
 #include "utils.h"
 #include "allocators.h"
 
@@ -45,7 +44,7 @@ typedef struct win32_AppCode {
     app_updateAndRender* updateAndRender;
     
     FILETIME lastModifiedTime;
-    HMODULE appLibrary;
+    HMODULE appDLL;
     
     b32 isValid;
 } win32_AppCode;

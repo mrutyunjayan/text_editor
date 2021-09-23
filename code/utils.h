@@ -487,11 +487,11 @@ typedef struct Str8List {
 } Str8List;
 
 internal Str8
-str8_init(u8* str, memoryIndex size);
+str8_init(char* str, memoryIndex size);
 internal Str8
-str8_range(u8* first, u8* opl);
+str8_range(char* first, char* opl);
 internal Str8
-str8_cstr(u8* cstr);
+str8_cstr(char* cstr);
 internal Str8
 str8_prefix(Str8 str, memoryIndex size);
 internal Str8
@@ -512,7 +512,7 @@ str8_join(Arena* arena,
 internal void
 str8_split(Arena* arena,
            Str8 string,
-           u8* splitCharacters,
+           char* splitCharacters,
            u32 count);
 
 internal void
@@ -525,7 +525,7 @@ str8List_push(Arena* arena,
               Str8 string);
 
 
-#define STR8_LITERAL(s) str8_init((u8*)(s), sizeof(s) - 1)
+#define STR8_LITERAL(s) str8_init((char*)(s), sizeof(s) - 1)
 #define STR8_EXPAND(s) (i32)((s).size), ((s).str)
 
 // NOTE(Jai): Concatenate two cstrings
@@ -643,11 +643,18 @@ stringFromDayOfWeek(DayOfWeek dayOfWeek) {
 
 
 internal Str8
-str8_init(u8* str, memoryIndex size);
+str8_init(char* str, memoryIndex size) {
+    Str8 result = {
+        .str = str,
+        .length = size
+    };
+    
+    return result;
+}
 internal Str8
-str8_range(u8* first, u8* opl);
+str8_range(char* first, char* opl);
 internal Str8
-str8_cstr(u8* cstr);
+str8_cstr(char* cstr);
 
 internal Str8
 str8_prefix(Str8 str, memoryIndex size) {
@@ -722,6 +729,7 @@ internal inline i32
 stringLength(char* string) {
     int count = 0;
     while (*string++) { ++count; }
+    
     return count;
 }
 

@@ -3,6 +3,7 @@
 #ifndef JED_H
 #define JED_H
 
+#define JAI_UTILS_IMPLEMENTATION 1
 #include "utils.h"
 #define JAI_ALLOCATORS_IMPLEMENTATION 1
 #include "allocators.h"
@@ -35,22 +36,23 @@ typedef struct Bitmap {
 } Bitmap;
 
 typedef struct FontGlyphSet {
+    FileReadResult* ttfFile;
     stbtt_fontinfo fontInfo;
-    i32 ascent;
-    i32 descent;
     i32 lineGap;
+    i32 ascent;
     f32 scale;
     Bitmap* glyphs;
     i32* advanceWidth;
     i32* leftSideBearing;
     i32* xOffset;
     i32* yOffset;
-    
 } FontGlyphSet;
 
 typedef struct EditorState {
     Arena arena;
     FontGlyphSet fontGlyphSet;
+    u32 row;
+    i32 col;
 } EditorState;
 
 void
