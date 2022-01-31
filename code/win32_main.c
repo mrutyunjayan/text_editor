@@ -65,7 +65,7 @@ win32_loadAppDLL(char* sourceDLLName,
         result.appDLL = LoadLibraryA(tempDLLName);
         
         if (result.appDLL) {
-            result.updateAndRender 
+            result.updateAndRender
                 = (app_updateAndRender*)GetProcAddress(result.appDLL, "jed_updateAndRender");
             result.isValid = true;
         }
@@ -82,6 +82,34 @@ win32_unloadAppCode(win32_AppCode* appCode) {
     }
     appCode->isValid = false;
     appCode->updateAndRender = 0;
+}
+
+//~ DEBUG MESSAGES
+
+internal void
+win32_console_print(char* message) {
+    
+	OutputDebugString(message);
+	DWORD length = (DWORD)strlen(message);
+	LPDWORD numberWritten = 0;
+	WriteConsole(GetStdHandle(STD_OUTPUT_HANDLE),
+                 message,
+                 length,
+                 numberWritten,
+                 NULL);
+}
+
+internal void
+win32_console_printError(char* message) {
+    
+	OutputDebugString(message);
+	DWORD length = (DWORD)strlen(message);
+	LPDWORD numberWritten = 0;
+	WriteConsole(GetStdHandle(STD_ERROR_HANDLE),
+                 message,
+                 length,
+                 numberWritten,
+                 NULL);
 }
 
 //~ WINDOWING
@@ -197,14 +225,30 @@ win32_mainWindowCallback(HWND window,
 }
 
 //~ MESSAGE PROCESSING
+
 internal void
-win32_processWindowMessages(void) {
+win32_processWindowMessages(jed_Input* input) {
     MSG message = {0};
     while (PeekMessage(&message, 0, 0, 0, PM_REMOVE)) {
         switch (message.message) {
             case WM_QUIT: {
                 running = false;
             } break;
+            
+            case WM_CHAR: {
+                char debugStr[255];
+                input->pressedChar = (char)message.wParam;
+                sprintf(debugStr, "%c\n", input->pressedChar);
+                win32_console_print(debugStr);
+            } break;
+#if 0
+            case WM_SYSKEYDOWN:
+            case WM_SYSKEYUP:
+            case WM_KEYDOWN:
+            case WM_KEYUP: {
+                
+            } break;
+#endif
             
             default: {
                 TranslateMessage(&message);
@@ -309,6 +353,36 @@ win32_file_writeFull(char* fileName,
     return result;
 }
 
+#if 0
+//~ INPUT HANDLING
+
+internal void
+win32_processPendingMessages(win32_State* state,
+                             jed_Input* input) {
+    MSG message;
+    while (PeekMessage(&message, 0, 0, 0, PM_REMOVE)) {
+        switch (message.message) {
+            case WM_QUIT: {
+                running = false;
+            } break;
+            case WM_SYSKEYDOWN:
+            case WM_KEYDOWN: {
+                u32 vkCode = (u32)message.wParam;
+                if (vkCode == ' ') {
+                    win32_processKeyboardMessage();
+                } break;
+            }
+        }
+    }
+}
+
+internal void
+win32_processKeyboardMessage(MSG message) {
+    
+}
+
+#endif
+
 //~ MAIN
 int CALLBACK
 WinMain(HINSTANCE instance,
@@ -330,7 +404,6 @@ WinMain(HINSTANCE instance,
     win32_buildExePathFileName(&platformState,
                                "lock.tmp",
                                sizeof(lockFullPath), lockFullPath);
-    
     
     WNDCLASSA windowClass = {
         .lpfnWndProc =  win32_mainWindowCallback,
@@ -393,7 +466,7 @@ WinMain(HINSTANCE instance,
     win32_AppCode app = win32_loadAppDLL(appDLLFullPath,
                                          tempDLLFullPath,
                                          lockFullPath);
-    u32 loadCounter = 0;
+    // u32 loadCounter = 0;
     
     jed_Input appInput = {0};
     
@@ -406,10 +479,10 @@ WinMain(HINSTANCE instance,
             app = win32_loadAppDLL(appDLLFullPath,
                                    tempDLLFullPath,
                                    lockFullPath);
-            loadCounter = 0;
+            // loadCounter = 0;
         }
         
-        win32_processWindowMessages();
+        win32_processWindowMessages(&appInput);
         jed_Backbuffer appBackbuffer = {
             .pixels = win32_backbuffer.memory,
             .width = win32_backbuffer.width,
