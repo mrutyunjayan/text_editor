@@ -1,0 +1,5 @@
+-g
+-I/Projects/text_editor/src
+-lSDL2
+-lSDL2main
+-std=c11
