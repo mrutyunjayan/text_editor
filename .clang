@@ -1,0 +1,9 @@
+-g
+-I/Projects/text_editor/include
+-Wall
+-Wno-unused-parameter
+-Wno-undef
+-Wno-unused-macros
+-Wno-extra-semi-stmt
+-Wno-unused-function
+-std=c11

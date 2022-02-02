@@ -1,0 +1,876 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ALLOCATORS_H	code/allocators.h	/^#define ALLOCATORS_H$/;"	d
+ARCHITECTURE_ARM	code/utils.h	/^    ARCHITECTURE_ARM,$/;"	e	enum:Architecture
+ARCHITECTURE_ARM64	code/utils.h	/^    ARCHITECTURE_ARM64,$/;"	e	enum:Architecture
+ARCHITECTURE_COUNT	code/utils.h	/^    ARCHITECTURE_COUNT$/;"	e	enum:Architecture
+ARCHITECTURE_NULL	code/utils.h	/^    ARCHITECTURE_NULL,$/;"	e	enum:Architecture
+ARCHITECTURE_X64	code/utils.h	/^    ARCHITECTURE_X64,$/;"	e	enum:Architecture
+ARCHITECTURE_X86	code/utils.h	/^    ARCHITECTURE_X86,$/;"	e	enum:Architecture
+ARCH_ARM	code/utils.h	/^#define ARCH_ARM /;"	d
+ARCH_ARM	code/utils.h	/^#undef ARCH_ARM$/;"	d
+ARCH_ARM64	code/utils.h	/^#define ARCH_ARM64 /;"	d
+ARCH_ARM64	code/utils.h	/^#undef ARCH_ARM64$/;"	d
+ARCH_X64	code/utils.h	/^#define ARCH_X64 /;"	d
+ARCH_X64	code/utils.h	/^#define ARCH_X64$/;"	d
+ARCH_X64	code/utils.h	/^#undef ARCH_X64$/;"	d
+ARCH_X86	code/utils.h	/^#define ARCH_X86 /;"	d
+ARCH_X86	code/utils.h	/^#undef ARCH_X86$/;"	d
+ARENA_PUSH_ARRAY	code/allocators.h	/^#define ARENA_PUSH_ARRAY(/;"	d
+ARENA_PUSH_ARRAY	code/otter_allocators.h	/^#define ARENA_PUSH_ARRAY(/;"	d
+ARENA_PUSH_ARRAYALIGNED	code/allocators.h	/^#define ARENA_PUSH_ARRAYALIGNED(/;"	d
+ARENA_PUSH_ARRAYALIGNED	code/otter_allocators.h	/^#define ARENA_PUSH_ARRAYALIGNED(/;"	d
+ARENA_PUSH_STRUCT	code/allocators.h	/^#define ARENA_PUSH_STRUCT(/;"	d
+ARENA_PUSH_STRUCT	code/otter_allocators.h	/^#define ARENA_PUSH_STRUCT(/;"	d
+ARENA_PUSH_STRUCTALIGNED	code/allocators.h	/^#define ARENA_PUSH_STRUCTALIGNED(/;"	d
+ARENA_PUSH_STRUCTALIGNED	code/otter_allocators.h	/^#define ARENA_PUSH_STRUCTALIGNED(/;"	d
+ARRAY_COUNT	code/utils.h	/^#define ARRAY_COUNT(/;"	d
+ASSERT	code/utils.h	/^#define ASSERT(/;"	d
+ASSERT	code/utils.h	/^#undef ASSERT$/;"	d
+ASSERT_BREAK	code/utils.h	/^#define ASSERT_BREAK(/;"	d
+AXIS_W	code/utils.h	/^    AXIS_W$/;"	e	enum:Axis
+AXIS_Y	code/utils.h	/^    AXIS_Y,$/;"	e	enum:Axis
+AXIS_Z	code/utils.h	/^    AXIS_Z,$/;"	e	enum:Axis
+AXIX_X	code/utils.h	/^    AXIX_X,$/;"	e	enum:Axis
+Architecture	code/utils.h	/^typedef enum Architecture {$/;"	g
+Architecture	code/utils.h	/^} Architecture;$/;"	t	typeref:enum:Architecture
+Arena	code/otter_allocators.h	/^} Arena;$/;"	t	typeref:struct:__anon19
+Arena	code/utils.h	/^typedef struct Arena {$/;"	s
+Arena	code/utils.h	/^} Arena;$/;"	t	typeref:struct:Arena
+Axis	code/utils.h	/^typedef enum Axis {$/;"	g
+Axis	code/utils.h	/^} Axis;$/;"	t	typeref:enum:Axis
+BITMAP_BYTES_PER_PIXEL	code/jed.h	/^#define BITMAP_BYTES_PER_PIXEL /;"	d
+Bitmap	code/jed.h	/^typedef struct Bitmap {$/;"	s
+Bitmap	code/jed.h	/^} Bitmap;$/;"	t	typeref:struct:Bitmap
+BitmapHeader	code/file.h	/^typedef struct BitmapHeader {$/;"	s
+BitmapHeader	code/file.h	/^} BitmapHeader;$/;"	t	typeref:struct:BitmapHeader
+BitscanResult	code/jed_intrinsics.h	/^typedef struct BitscanResult {$/;"	s
+BitscanResult	code/jed_intrinsics.h	/^} BitscanResult;$/;"	t	typeref:struct:BitscanResult
+CC	makefile	/^CC = clang$/;"	m
+CFLAGS	makefile	/^CFLAGS = `sdl2-config --cflags --libs` -I$(INCLUDE) code\/sdl2_main.c -Wall -Wno-unused-parameter -Wno-undef -Wno-unused-macros -Wno-extra-semi-stmt -Wno-unused-function -g  $/;"	m
+CLAMP	code/utils.h	/^#define CLAMP(/;"	d
+CLAMP_BOT	code/utils.h	/^#define CLAMP_BOT(/;"	d
+CLAMP_TOP	code/utils.h	/^#define CLAMP_TOP(/;"	d
+COMPILER_CL	code/utils.h	/^#define COMPILER_CL /;"	d
+COMPILER_CL	code/utils.h	/^#undef COMPILER_CL$/;"	d
+COMPILER_CLANG	code/utils.h	/^#define COMPILER_CLANG /;"	d
+COMPILER_CLANG	code/utils.h	/^#undef COMPILER_CLANG$/;"	d
+COMPILER_GCC	code/utils.h	/^#define COMPILER_GCC /;"	d
+COMPILER_GCC	code/utils.h	/^#undef COMPILER_GCC$/;"	d
+Clock	code/sdl2_main.h	/^typedef struct Clock {$/;"	s
+Clock	code/sdl2_main.h	/^} Clock;$/;"	t	typeref:struct:Clock
+Clock	code/win32_main.h	/^typedef struct Clock {$/;"	s
+Clock	code/win32_main.h	/^} Clock;$/;"	t	typeref:struct:Clock
+DAY_OF_WEEK_FRI	code/utils.h	/^    DAY_OF_WEEK_FRI,$/;"	e	enum:DayOfWeek
+DAY_OF_WEEK_MON	code/utils.h	/^    DAY_OF_WEEK_MON,$/;"	e	enum:DayOfWeek
+DAY_OF_WEEK_SAT	code/utils.h	/^    DAY_OF_WEEK_SAT,$/;"	e	enum:DayOfWeek
+DAY_OF_WEEK_SUN	code/utils.h	/^    DAY_OF_WEEK_SUN,$/;"	e	enum:DayOfWeek
+DAY_OF_WEEK_THU	code/utils.h	/^    DAY_OF_WEEK_THU,$/;"	e	enum:DayOfWeek
+DAY_OF_WEEK_TUE	code/utils.h	/^    DAY_OF_WEEK_TUE,$/;"	e	enum:DayOfWeek
+DAY_OF_WEEK_WED	code/utils.h	/^    DAY_OF_WEEK_WED,$/;"	e	enum:DayOfWeek
+DEFAULT_ARENA_ALIGNMENT	code/allocators.h	/^#define DEFAULT_ARENA_ALIGNMENT /;"	d
+DEFAULT_ARENA_ALIGNMENT	code/otter_allocators.h	/^#define DEFAULT_ARENA_ALIGNMENT /;"	d
+DLL_PUSH_BACK	code/utils.h	/^#define DLL_PUSH_BACK(/;"	d
+DLL_PUSH_BACK_NP	code/utils.h	/^#define DLL_PUSH_BACK_NP(/;"	d
+DLL_PUSH_FRONT	code/utils.h	/^#define DLL_PUSH_FRONT(/;"	d
+DLL_REMOVE	code/utils.h	/^#define DLL_REMOVE(/;"	d
+DLL_REMOVE_NP	code/utils.h	/^#define DLL_REMOVE_NP(/;"	d
+DayOfWeek	code/utils.h	/^typedef enum DayOfWeek {$/;"	g
+DayOfWeek	code/utils.h	/^} DayOfWeek;$/;"	t	typeref:enum:DayOfWeek
+EditorState	code/jed.h	/^typedef struct EditorState {$/;"	s
+EditorState	code/jed.h	/^} EditorState;$/;"	t	typeref:struct:EditorState
+FILES_H	code/files.h	/^#define FILES_H$/;"	d
+FILE_H	code/file.h	/^#define FILE_H$/;"	d
+FileReadResult	code/platform.h	/^typedef struct FileReadResult {$/;"	s
+FileReadResult	code/platform.h	/^} FileReadResult;$/;"	t	typeref:struct:FileReadResult
+FontGlyphSet	code/jed.h	/^typedef struct FontGlyphSet {$/;"	s
+FontGlyphSet	code/jed.h	/^} FontGlyphSet;$/;"	t	typeref:struct:FontGlyphSet
+GB	code/utils.h	/^#define GB(/;"	d
+GLUE	code/utils.h	/^#define GLUE(/;"	d
+GLUE_	code/utils.h	/^#define GLUE_(/;"	d
+INCLUDE	makefile	/^INCLUDE = .\/include\/ $/;"	m
+IS_POWER_OF_2	code/utils.h	/^#define IS_POWER_OF_2(/;"	d
+JAI_ALLOCATORS_IMPLEMENTATION	code/allocators.h	/^#undef JAI_ALLOCATORS_IMPLEMENTATION$/;"	d
+JAI_ALLOCATORS_IMPLEMENTATION	code/jed.h	/^#define JAI_ALLOCATORS_IMPLEMENTATION /;"	d
+JAI_ALLOCATORS_IMPLEMENTATION	code/sdl2_main.c	/^#define JAI_ALLOCATORS_IMPLEMENTATION$/;"	d	file:
+JAI_UTILS_IMPLEMENTATION	code/jed.h	/^#define JAI_UTILS_IMPLEMENTATION /;"	d
+JAI_UTILS_IMPLEMENTATION	code/sdl2_main.c	/^#define JAI_UTILS_IMPLEMENTATION$/;"	d	file:
+JAI_UTILS_IMPLEMENTATION	code/utils.h	/^#undef JAI_UTILS_IMPLEMENTATION$/;"	d
+JED_FILE_IMPLEMENTATION	code/file.h	/^#undef JED_FILE_IMPLEMENTATION$/;"	d
+JED_FILE_IMPLEMENTATION	code/jed.c	/^#define JED_FILE_IMPLEMENTATION /;"	d	file:
+JED_H	code/jed.h	/^#define JED_H$/;"	d
+JED_INTRINSICS_H	code/jed_intrinsics.h	/^#define JED_INTRINSICS_H$/;"	d
+JED_RENDERER_IMPLEMENTATION	code/jed.c	/^#define JED_RENDERER_IMPLEMENTATION /;"	d	file:
+JED_RENDERER_IMPLEMENTATION	code/renderer.h	/^#undef JED_RENDERER_IMPLEMENTATION$/;"	d
+KB	code/utils.h	/^#define KB(/;"	d
+MAX	code/utils.h	/^#define MAX(/;"	d
+MB	code/utils.h	/^#define MB(/;"	d
+MEMBER	code/utils.h	/^#define MEMBER(/;"	d
+MEMORY_COPY	code/utils.h	/^#define MEMORY_COPY(/;"	d
+MEMORY_COPY_ARRAY	code/utils.h	/^#define MEMORY_COPY_ARRAY(/;"	d
+MEMORY_COPY_STRUCT	code/utils.h	/^#define MEMORY_COPY_STRUCT(/;"	d
+MEMORY_COPY_TYPED	code/utils.h	/^#define MEMORY_COPY_TYPED(/;"	d
+MEMORY_MATCH	code/utils.h	/^#define MEMORY_MATCH(/;"	d
+MEMORY_ZERO	code/utils.h	/^#define MEMORY_ZERO(/;"	d
+MEMORY_ZERO_ARRAY	code/utils.h	/^#define MEMORY_ZERO_ARRAY(/;"	d
+MEMORY_ZERO_STRUCT	code/utils.h	/^#define MEMORY_ZERO_STRUCT(/;"	d
+MEMORY_ZERO_TYPED	code/utils.h	/^#define MEMORY_ZERO_TYPED(/;"	d
+MIN	code/utils.h	/^#define MIN(/;"	d
+MONTH_APR	code/utils.h	/^    MONTH_APR,$/;"	e	enum:Month
+MONTH_AUG	code/utils.h	/^    MONTH_AUG,$/;"	e	enum:Month
+MONTH_DEC	code/utils.h	/^    MONTH_DEC,$/;"	e	enum:Month
+MONTH_FEB	code/utils.h	/^    MONTH_FEB,$/;"	e	enum:Month
+MONTH_JAN	code/utils.h	/^    MONTH_JAN,$/;"	e	enum:Month
+MONTH_JUL	code/utils.h	/^    MONTH_JUL,$/;"	e	enum:Month
+MONTH_JUN	code/utils.h	/^    MONTH_JUN,$/;"	e	enum:Month
+MONTH_MAR	code/utils.h	/^    MONTH_MAR,$/;"	e	enum:Month
+MONTH_MAY	code/utils.h	/^    MONTH_MAY,$/;"	e	enum:Month
+MONTH_NOV	code/utils.h	/^    MONTH_NOV,$/;"	e	enum:Month
+MONTH_OCT	code/utils.h	/^    MONTH_OCT,$/;"	e	enum:Month
+MONTH_SEP	code/utils.h	/^    MONTH_SEP,$/;"	e	enum:Month
+Month	code/utils.h	/^typedef enum Month {$/;"	g
+Month	code/utils.h	/^} Month;$/;"	t	typeref:enum:Month
+OFFSET_OF_MEMBER	code/utils.h	/^#define OFFSET_OF_MEMBER(/;"	d
+OG_ALLOCATORS_H	code/otter_allocators.h	/^#define OG_ALLOCATORS_H$/;"	d
+OG_FLT_MAX	code/utils.h	/^#define OG_FLT_MAX /;"	d
+OG_INT_MAX	code/utils.h	/^#define OG_INT_MAX /;"	d
+OPERATING_SYSTEM_COUNT	code/utils.h	/^    OPERATING_SYSTEM_COUNT$/;"	e	enum:OperatingSystem
+OPERATING_SYSTEM_LINUX	code/utils.h	/^    OPERATING_SYSTEM_LINUX,$/;"	e	enum:OperatingSystem
+OPERATING_SYSTEM_NULL	code/utils.h	/^    OPERATING_SYSTEM_NULL,$/;"	e	enum:OperatingSystem
+OPERATING_SYSTEM_WINDOWS	code/utils.h	/^    OPERATING_SYSTEM_WINDOWS,$/;"	e	enum:OperatingSystem
+OS_LINUX	code/utils.h	/^#define OS_LINUX /;"	d
+OS_LINUX	code/utils.h	/^#undef OS_LINUX$/;"	d
+OS_WINDOWS	code/utils.h	/^#define OS_WINDOWS /;"	d
+OS_WINDOWS	code/utils.h	/^#undef OS_WINDOWS$/;"	d
+OperatingSystem	code/utils.h	/^typedef enum OperatingSystem {$/;"	g
+OperatingSystem	code/utils.h	/^} OperatingSystem;$/;"	t	typeref:enum:OperatingSystem
+PCH_H	code/pch.h	/^#define PCH_H$/;"	d
+PERSISTENT_ALLOCATION_SIZE	code/win32_main.c	/^#define PERSISTENT_ALLOCATION_SIZE /;"	d	file:
+PLATFORM_FILE_FREE_MEMORY	code/platform.h	/^#define PLATFORM_FILE_FREE_MEMORY(/;"	d
+PLATFORM_FILE_READ_FULL	code/platform.h	/^#define PLATFORM_FILE_READ_FULL(/;"	d
+PLATFORM_FILE_WRITE_FULL	code/platform.h	/^#define PLATFORM_FILE_WRITE_FULL(/;"	d
+PLATFORM_H	code/platform.h	/^#define PLATFORM_H$/;"	d
+PTR_FROM_UINT	code/utils.h	/^#define PTR_FROM_UINT(/;"	d
+RENDERER_H	code/renderer.h	/^#define RENDERER_H$/;"	d
+SDL2_MAIN_H	code/sdl2_main.h	/^#define SDL2_MAIN_H$/;"	d
+SIDE_MAX	code/utils.h	/^    SIDE_MAX$/;"	e	enum:Side
+SIDE_MIN	code/utils.h	/^    SIDE_MIN,$/;"	e	enum:Side
+SLL_QUEUE_POP	code/utils.h	/^#define SLL_QUEUE_POP(/;"	d
+SLL_QUEUE_POP_N	code/utils.h	/^#define SLL_QUEUE_POP_N(/;"	d
+SLL_QUEUE_PUSH	code/utils.h	/^#define SLL_QUEUE_PUSH(/;"	d
+SLL_QUEUE_PUSH_FRONT	code/utils.h	/^#define SLL_QUEUE_PUSH_FRONT(/;"	d
+SLL_QUEUE_PUSH_FRONT_N	code/utils.h	/^#define SLL_QUEUE_PUSH_FRONT_N(/;"	d
+SLL_QUEUE_PUSH_N	code/utils.h	/^#define SLL_QUEUE_PUSH_N(/;"	d
+SLL_STACK_POP	code/utils.h	/^#define SLL_STACK_POP(/;"	d
+SLL_STACK_POP_N	code/utils.h	/^#define SLL_STACK_POP_N(/;"	d
+SLL_STACK_PUSH	code/utils.h	/^#define SLL_STACK_PUSH(/;"	d
+SLL_STACK_PUSH_N	code/utils.h	/^#define SLL_STACK_PUSH_N(/;"	d
+STBTT_DEF	include/stb_truetype.h	/^#define STBTT_DEF /;"	d
+STBTT_FIX	include/stb_truetype.h	/^#define STBTT_FIX /;"	d
+STBTT_FIXMASK	include/stb_truetype.h	/^#define STBTT_FIXMASK /;"	d
+STBTT_FIXSHIFT	include/stb_truetype.h	/^#define STBTT_FIXSHIFT /;"	d
+STBTT_GPOS_TODO_assert	include/stb_truetype.h	/^#define STBTT_GPOS_TODO_assert(/;"	d
+STBTT_MACSTYLE_BOLD	include/stb_truetype.h	/^#define STBTT_MACSTYLE_BOLD /;"	d
+STBTT_MACSTYLE_DONTCARE	include/stb_truetype.h	/^#define STBTT_MACSTYLE_DONTCARE /;"	d
+STBTT_MACSTYLE_ITALIC	include/stb_truetype.h	/^#define STBTT_MACSTYLE_ITALIC /;"	d
+STBTT_MACSTYLE_NONE	include/stb_truetype.h	/^#define STBTT_MACSTYLE_NONE /;"	d
+STBTT_MACSTYLE_UNDERSCORE	include/stb_truetype.h	/^#define STBTT_MACSTYLE_UNDERSCORE /;"	d
+STBTT_MAC_EID_ARABIC	include/stb_truetype.h	/^    STBTT_MAC_EID_ROMAN        =0,   STBTT_MAC_EID_ARABIC       =4,$/;"	e	enum:__anon12
+STBTT_MAC_EID_CHINESE_TRAD	include/stb_truetype.h	/^    STBTT_MAC_EID_CHINESE_TRAD =2,   STBTT_MAC_EID_GREEK        =6,$/;"	e	enum:__anon12
+STBTT_MAC_EID_GREEK	include/stb_truetype.h	/^    STBTT_MAC_EID_CHINESE_TRAD =2,   STBTT_MAC_EID_GREEK        =6,$/;"	e	enum:__anon12
+STBTT_MAC_EID_HEBREW	include/stb_truetype.h	/^    STBTT_MAC_EID_JAPANESE     =1,   STBTT_MAC_EID_HEBREW       =5,$/;"	e	enum:__anon12
+STBTT_MAC_EID_JAPANESE	include/stb_truetype.h	/^    STBTT_MAC_EID_JAPANESE     =1,   STBTT_MAC_EID_HEBREW       =5,$/;"	e	enum:__anon12
+STBTT_MAC_EID_KOREAN	include/stb_truetype.h	/^    STBTT_MAC_EID_KOREAN       =3,   STBTT_MAC_EID_RUSSIAN      =7$/;"	e	enum:__anon12
+STBTT_MAC_EID_ROMAN	include/stb_truetype.h	/^    STBTT_MAC_EID_ROMAN        =0,   STBTT_MAC_EID_ARABIC       =4,$/;"	e	enum:__anon12
+STBTT_MAC_EID_RUSSIAN	include/stb_truetype.h	/^    STBTT_MAC_EID_KOREAN       =3,   STBTT_MAC_EID_RUSSIAN      =7$/;"	e	enum:__anon12
+STBTT_MAC_LANG_ARABIC	include/stb_truetype.h	/^    STBTT_MAC_LANG_ARABIC       =12,   STBTT_MAC_LANG_KOREAN       =23,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_CHINESE_SIMPLIFIED	include/stb_truetype.h	/^    STBTT_MAC_LANG_HEBREW       =10,   STBTT_MAC_LANG_CHINESE_SIMPLIFIED =33,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_CHINESE_TRAD	include/stb_truetype.h	/^    STBTT_MAC_LANG_ITALIAN      =3 ,   STBTT_MAC_LANG_CHINESE_TRAD =19$/;"	e	enum:__anon14
+STBTT_MAC_LANG_DUTCH	include/stb_truetype.h	/^    STBTT_MAC_LANG_DUTCH        =4 ,   STBTT_MAC_LANG_RUSSIAN      =32,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_ENGLISH	include/stb_truetype.h	/^    STBTT_MAC_LANG_ENGLISH      =0 ,   STBTT_MAC_LANG_JAPANESE     =11,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_FRENCH	include/stb_truetype.h	/^    STBTT_MAC_LANG_FRENCH       =1 ,   STBTT_MAC_LANG_SPANISH      =6 ,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_GERMAN	include/stb_truetype.h	/^    STBTT_MAC_LANG_GERMAN       =2 ,   STBTT_MAC_LANG_SWEDISH      =5 ,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_HEBREW	include/stb_truetype.h	/^    STBTT_MAC_LANG_HEBREW       =10,   STBTT_MAC_LANG_CHINESE_SIMPLIFIED =33,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_ITALIAN	include/stb_truetype.h	/^    STBTT_MAC_LANG_ITALIAN      =3 ,   STBTT_MAC_LANG_CHINESE_TRAD =19$/;"	e	enum:__anon14
+STBTT_MAC_LANG_JAPANESE	include/stb_truetype.h	/^    STBTT_MAC_LANG_ENGLISH      =0 ,   STBTT_MAC_LANG_JAPANESE     =11,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_KOREAN	include/stb_truetype.h	/^    STBTT_MAC_LANG_ARABIC       =12,   STBTT_MAC_LANG_KOREAN       =23,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_RUSSIAN	include/stb_truetype.h	/^    STBTT_MAC_LANG_DUTCH        =4 ,   STBTT_MAC_LANG_RUSSIAN      =32,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_SPANISH	include/stb_truetype.h	/^    STBTT_MAC_LANG_FRENCH       =1 ,   STBTT_MAC_LANG_SPANISH      =6 ,$/;"	e	enum:__anon14
+STBTT_MAC_LANG_SWEDISH	include/stb_truetype.h	/^    STBTT_MAC_LANG_GERMAN       =2 ,   STBTT_MAC_LANG_SWEDISH      =5 ,$/;"	e	enum:__anon14
+STBTT_MAX_OVERSAMPLE	include/stb_truetype.h	/^#define STBTT_MAX_OVERSAMPLE /;"	d
+STBTT_MS_EID_SHIFTJIS	include/stb_truetype.h	/^    STBTT_MS_EID_SHIFTJIS      =2,$/;"	e	enum:__anon11
+STBTT_MS_EID_SYMBOL	include/stb_truetype.h	/^    STBTT_MS_EID_SYMBOL        =0,$/;"	e	enum:__anon11
+STBTT_MS_EID_UNICODE_BMP	include/stb_truetype.h	/^    STBTT_MS_EID_UNICODE_BMP   =1,$/;"	e	enum:__anon11
+STBTT_MS_EID_UNICODE_FULL	include/stb_truetype.h	/^    STBTT_MS_EID_UNICODE_FULL  =10$/;"	e	enum:__anon11
+STBTT_MS_LANG_CHINESE	include/stb_truetype.h	/^    STBTT_MS_LANG_CHINESE     =0x0804,   STBTT_MS_LANG_JAPANESE    =0x0411,$/;"	e	enum:__anon13
+STBTT_MS_LANG_DUTCH	include/stb_truetype.h	/^    STBTT_MS_LANG_DUTCH       =0x0413,   STBTT_MS_LANG_KOREAN      =0x0412,$/;"	e	enum:__anon13
+STBTT_MS_LANG_ENGLISH	include/stb_truetype.h	/^    STBTT_MS_LANG_ENGLISH     =0x0409,   STBTT_MS_LANG_ITALIAN     =0x0410,$/;"	e	enum:__anon13
+STBTT_MS_LANG_FRENCH	include/stb_truetype.h	/^    STBTT_MS_LANG_FRENCH      =0x040c,   STBTT_MS_LANG_RUSSIAN     =0x0419,$/;"	e	enum:__anon13
+STBTT_MS_LANG_GERMAN	include/stb_truetype.h	/^    STBTT_MS_LANG_GERMAN      =0x0407,   STBTT_MS_LANG_SPANISH     =0x0409,$/;"	e	enum:__anon13
+STBTT_MS_LANG_HEBREW	include/stb_truetype.h	/^    STBTT_MS_LANG_HEBREW      =0x040d,   STBTT_MS_LANG_SWEDISH     =0x041D$/;"	e	enum:__anon13
+STBTT_MS_LANG_ITALIAN	include/stb_truetype.h	/^    STBTT_MS_LANG_ENGLISH     =0x0409,   STBTT_MS_LANG_ITALIAN     =0x0410,$/;"	e	enum:__anon13
+STBTT_MS_LANG_JAPANESE	include/stb_truetype.h	/^    STBTT_MS_LANG_CHINESE     =0x0804,   STBTT_MS_LANG_JAPANESE    =0x0411,$/;"	e	enum:__anon13
+STBTT_MS_LANG_KOREAN	include/stb_truetype.h	/^    STBTT_MS_LANG_DUTCH       =0x0413,   STBTT_MS_LANG_KOREAN      =0x0412,$/;"	e	enum:__anon13
+STBTT_MS_LANG_RUSSIAN	include/stb_truetype.h	/^    STBTT_MS_LANG_FRENCH      =0x040c,   STBTT_MS_LANG_RUSSIAN     =0x0419,$/;"	e	enum:__anon13
+STBTT_MS_LANG_SPANISH	include/stb_truetype.h	/^    STBTT_MS_LANG_GERMAN      =0x0407,   STBTT_MS_LANG_SPANISH     =0x0409,$/;"	e	enum:__anon13
+STBTT_MS_LANG_SWEDISH	include/stb_truetype.h	/^    STBTT_MS_LANG_HEBREW      =0x040d,   STBTT_MS_LANG_SWEDISH     =0x041D$/;"	e	enum:__anon13
+STBTT_PLATFORM_ID_ISO	include/stb_truetype.h	/^    STBTT_PLATFORM_ID_ISO       =2,$/;"	e	enum:__anon9
+STBTT_PLATFORM_ID_MAC	include/stb_truetype.h	/^    STBTT_PLATFORM_ID_MAC       =1,$/;"	e	enum:__anon9
+STBTT_PLATFORM_ID_MICROSOFT	include/stb_truetype.h	/^    STBTT_PLATFORM_ID_MICROSOFT =3$/;"	e	enum:__anon9
+STBTT_PLATFORM_ID_UNICODE	include/stb_truetype.h	/^    STBTT_PLATFORM_ID_UNICODE   =0,$/;"	e	enum:__anon9
+STBTT_POINT_SIZE	include/stb_truetype.h	/^#define STBTT_POINT_SIZE(/;"	d
+STBTT_RASTERIZER_VERSION	include/stb_truetype.h	/^#define STBTT_RASTERIZER_VERSION /;"	d
+STBTT_UNICODE_EID_ISO_10646	include/stb_truetype.h	/^    STBTT_UNICODE_EID_ISO_10646      =2,$/;"	e	enum:__anon10
+STBTT_UNICODE_EID_UNICODE_1_0	include/stb_truetype.h	/^    STBTT_UNICODE_EID_UNICODE_1_0    =0,$/;"	e	enum:__anon10
+STBTT_UNICODE_EID_UNICODE_1_1	include/stb_truetype.h	/^    STBTT_UNICODE_EID_UNICODE_1_1    =1,$/;"	e	enum:__anon10
+STBTT_UNICODE_EID_UNICODE_2_0_BMP	include/stb_truetype.h	/^    STBTT_UNICODE_EID_UNICODE_2_0_BMP=3,$/;"	e	enum:__anon10
+STBTT_UNICODE_EID_UNICODE_2_0_FULL	include/stb_truetype.h	/^    STBTT_UNICODE_EID_UNICODE_2_0_FULL=4$/;"	e	enum:__anon10
+STBTT__COMPARE	include/stb_truetype.h	/^#define STBTT__COMPARE(/;"	d
+STBTT__CSCTX_INIT	include/stb_truetype.h	/^#define STBTT__CSCTX_INIT(/;"	d
+STBTT__CSERR	include/stb_truetype.h	/^#define STBTT__CSERR(/;"	d
+STBTT__CSERR	include/stb_truetype.h	/^#undef STBTT__CSERR$/;"	d
+STBTT__NOTUSED	include/stb_truetype.h	/^#define STBTT__NOTUSED(/;"	d
+STBTT__OVER_MASK	include/stb_truetype.h	/^#define STBTT__OVER_MASK /;"	d
+STBTT_acos	include/stb_truetype.h	/^#define STBTT_acos(/;"	d
+STBTT_assert	include/stb_truetype.h	/^#define STBTT_assert(/;"	d
+STBTT_cos	include/stb_truetype.h	/^#define STBTT_cos(/;"	d
+STBTT_fabs	include/stb_truetype.h	/^#define STBTT_fabs(/;"	d
+STBTT_fmod	include/stb_truetype.h	/^#define STBTT_fmod(/;"	d
+STBTT_free	include/stb_truetype.h	/^#define STBTT_free(/;"	d
+STBTT_iceil	include/stb_truetype.h	/^#define STBTT_iceil(/;"	d
+STBTT_ifloor	include/stb_truetype.h	/^#define STBTT_ifloor(/;"	d
+STBTT_malloc	include/stb_truetype.h	/^#define STBTT_malloc(/;"	d
+STBTT_max	include/stb_truetype.h	/^#define STBTT_max(/;"	d
+STBTT_memcpy	include/stb_truetype.h	/^#define STBTT_memcpy /;"	d
+STBTT_memset	include/stb_truetype.h	/^#define STBTT_memset /;"	d
+STBTT_min	include/stb_truetype.h	/^#define STBTT_min(/;"	d
+STBTT_pow	include/stb_truetype.h	/^#define STBTT_pow(/;"	d
+STBTT_sqrt	include/stb_truetype.h	/^#define STBTT_sqrt(/;"	d
+STBTT_strlen	include/stb_truetype.h	/^#define STBTT_strlen(/;"	d
+STBTT_vcubic	include/stb_truetype.h	/^    STBTT_vcubic$/;"	e	enum:__anon6
+STBTT_vcurve	include/stb_truetype.h	/^    STBTT_vcurve,$/;"	e	enum:__anon6
+STBTT_vline	include/stb_truetype.h	/^    STBTT_vline,$/;"	e	enum:__anon6
+STBTT_vmove	include/stb_truetype.h	/^    STBTT_vmove=1,$/;"	e	enum:__anon6
+STB_TRUETYPE_IMPLEMENTATION	code/jed.h	/^#define STB_TRUETYPE_IMPLEMENTATION /;"	d
+STMT	code/utils.h	/^#define STMT(/;"	d
+STR8_EXPAND	code/utils.h	/^#define STR8_EXPAND(/;"	d
+STR8_LITERAL	code/utils.h	/^#define STR8_LITERAL(/;"	d
+STRINGIFY	code/utils.h	/^#define STRINGIFY(/;"	d
+STRINGIFY_	code/utils.h	/^#define STRINGIFY_(/;"	d
+SWAP	code/utils.h	/^#define SWAP(/;"	d
+Side	code/utils.h	/^typedef enum Side {$/;"	g
+Side	code/utils.h	/^} Side;$/;"	t	typeref:enum:Side
+Str8	code/utils.h	/^typedef struct Str8 {$/;"	s
+Str8	code/utils.h	/^} Str8;$/;"	t	typeref:struct:Str8
+Str8List	code/utils.h	/^typedef struct Str8List {$/;"	s
+Str8List	code/utils.h	/^} Str8List;$/;"	t	typeref:struct:Str8List
+Str8Node	code/utils.h	/^struct Str8Node {$/;"	s
+Str8Node	code/utils.h	/^typedef struct Str8Node Str8Node;$/;"	t	typeref:struct:Str8Node
+TB	code/utils.h	/^#define TB(/;"	d
+TRANSIENT_ALLOCATION_SIZE	code/win32_main.c	/^#define TRANSIENT_ALLOCATION_SIZE /;"	d	file:
+UINT_FROM_PTR	code/utils.h	/^#define UINT_FROM_PTR(/;"	d
+UPDATE_AND_RENDER	code/jed.c	/^UPDATE_AND_RENDER(jed_updateAndRender) {$/;"	f
+UPDATE_AND_RENDER	code/platform.h	/^#define UPDATE_AND_RENDER(/;"	d
+UTILS_H	code/utils.h	/^#define UTILS_H$/;"	d
+WIN32_MAIN_H	code/win32_main.h	/^#define WIN32_MAIN_H$/;"	d
+WinMain	code/win32_main.c	/^WinMain(HINSTANCE instance,$/;"	f
+ZERO_STRUCT	code/allocators.h	/^#define ZERO_STRUCT(/;"	d
+__STB_INCLUDE_STB_TRUETYPE_H__	include/stb_truetype.h	/^#define __STB_INCLUDE_STB_TRUETYPE_H__$/;"	d
+advance	include/stb_truetype.h	/^    int advance;$/;"	m	struct:stbtt_kerningentry
+advanceWidth	code/jed.h	/^    i32* advanceWidth;$/;"	m	struct:FontGlyphSet
+alloc_BaseMemory	code/allocators.h	/^typedef struct alloc_BaseMemory {$/;"	s
+alloc_BaseMemory	code/allocators.h	/^} alloc_BaseMemory;$/;"	t	typeref:struct:alloc_BaseMemory
+alloc_arena_alignForward	code/allocators.h	/^alloc_arena_alignForward(uintptr ptr,$/;"	f
+alloc_arena_alloc	code/allocators.h	/^alloc_arena_alloc(Arena* arena,$/;"	f
+alloc_arena_allocAlign	code/allocators.h	/^alloc_arena_allocAlign(Arena* arena,$/;"	f
+alloc_arena_free	code/allocators.h	/^alloc_arena_free(Arena* arena) {$/;"	f
+alloc_arena_initialize	code/allocators.h	/^alloc_arena_initialize(Arena* arena,$/;"	f
+alloc_arena_resize	code/allocators.h	/^alloc_arena_resize(Arena* arena,$/;"	f
+alloc_arena_resizeAlign	code/allocators.h	/^alloc_arena_resizeAlign(Arena* arena,$/;"	f
+alloc_baseMemory_use_malloc	code/allocators.h	/^alloc_baseMemory_use_malloc(void) {$/;"	f
+alloc_changeMemoryFunction	code/allocators.h	/^typedef void alloc_changeMemoryFunction(void* ptr,$/;"	t
+alloc_malloc_commit	code/allocators.h	/^alloc_malloc_commit(void* ptr,$/;"	f
+alloc_malloc_decommit	code/allocators.h	/^alloc_malloc_decommit(void* ptr,$/;"	f
+alloc_malloc_release	code/allocators.h	/^alloc_malloc_release(void* ptr,$/;"	f
+alloc_malloc_reserve	code/allocators.h	/^alloc_malloc_reserve(u64 size) {$/;"	f
+alloc_reserve	code/allocators.h	/^typedef void* alloc_reserve(memoryIndex size);$/;"	t
+alloc_zeroSize	code/allocators.h	/^alloc_zeroSize(memoryIndex size,$/;"	f
+appDLL	code/sdl2_main.h	/^    HMODULE appDLL;$/;"	m	struct:sdl2_AppCode
+appDLL	code/win32_main.h	/^    HMODULE appDLL;$/;"	m	struct:win32_AppCode
+app_updateAndRender	code/platform.h	/^typedef UPDATE_AND_RENDER(app_updateAndRender);$/;"	t
+architectureFromContext	code/utils.h	/^architectureFromContext(void) {$/;"	f
+architecture_String	code/utils.h	/^global char architecture_String[5][6] = {$/;"	v
+arena	code/jed.h	/^    Arena arena;$/;"	m	struct:EditorState
+array_of_unicode_codepoints	include/stb_truetype.h	/^    int *array_of_unicode_codepoints;       \/\/ if non-zero, then this is an array of unicode codepoints$/;"	m	struct:__anon5
+ascent	code/jed.h	/^    i32 ascent;$/;"	m	struct:FontGlyphSet
+aspectRatio	code/jed.h	/^	u32 aspectRatio;$/;"	m	struct:jed_Backbuffer
+b32	code/utils.h	/^typedef int32_t b32; \/\/ Basic boolean type for C$/;"	t
+bitmapOffset	code/file.h	/^	u32 bitmapOffset;$/;"	m	struct:BitmapHeader
+bitsPerPixel	code/file.h	/^	u16 bitsPerPixel;$/;"	m	struct:BitmapHeader
+blueMask	code/file.h	/^	u32 blueMask;$/;"	m	struct:BitmapHeader
+bottom_y	include/stb_truetype.h	/^    int x,y,bottom_y;$/;"	m	struct:__anon17
+bounds	include/stb_truetype.h	/^    int bounds;$/;"	m	struct:__anon15
+buffer	code/otter_allocators.h	/^	u8* buffer; \/\/ Pointer to the buffer, must point to an allocated block of$/;"	m	struct:__anon19
+buffer	code/utils.h	/^	u8* buffer; \/\/ Pointer to the buffer, must point to an allocated block of$/;"	m	struct:Arena
+bufferSize	code/otter_allocators.h	/^    memoryIndex bufferSize; \/\/ Size of the buffer in bytes$/;"	m	struct:__anon19
+bufferSize	code/utils.h	/^    memoryIndex bufferSize; \/\/ Size of the buffer in bytes$/;"	m	struct:Arena
+catStrings	code/utils.h	/^catStrings(i64 sourceACount, char* sourceA,$/;"	f
+cdata	include/stb_truetype.h	/^stbtt_bakedchar cdata[96]; \/\/ ASCII 32..126 is 95 glyphs$/;"	v
+cff	include/stb_truetype.h	/^    stbtt__buf cff;                    \/\/ cff font data$/;"	m	struct:stbtt_fontinfo
+chardata_for_range	include/stb_truetype.h	/^    stbtt_packedchar *chardata_for_range; \/\/ output$/;"	m	struct:__anon5
+charstrings	include/stb_truetype.h	/^    stbtt__buf charstrings;            \/\/ the charstring index$/;"	m	struct:stbtt_fontinfo
+clock	code/sdl2_main.h	/^    Clock clock;$/;"	m	struct:sdl2_State
+clock	code/win32_main.h	/^    Clock clock;$/;"	m	struct:win32_State
+col	code/jed.h	/^    i32 col;$/;"	m	struct:EditorState
+coloursImportant	code/file.h	/^	u32 coloursImportant;$/;"	m	struct:BitmapHeader
+coloursUsed	code/file.h	/^	u32 coloursUsed;$/;"	m	struct:BitmapHeader
+commit	code/allocators.h	/^    alloc_changeMemoryFunction* commit;$/;"	m	struct:alloc_BaseMemory
+compression	code/file.h	/^	u32 compression;$/;"	m	struct:BitmapHeader
+contentSize	code/platform.h	/^    u32 contentSize;$/;"	m	struct:FileReadResult
+contents	code/platform.h	/^    void* contents;$/;"	m	struct:FileReadResult
+currentOffset	code/otter_allocators.h	/^    memoryIndex currentOffset; \/\/ The current offset to the end of the used memory, initialize to zero$/;"	m	struct:__anon19
+currentOffset	code/utils.h	/^    memoryIndex currentOffset; \/\/ The current offset to the end of the used memory, initialize to zero$/;"	m	struct:Arena
+cursor	include/stb_truetype.h	/^    int cursor;$/;"	m	struct:__anon1
+cx	include/stb_truetype.h	/^    stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anon7
+cx1	include/stb_truetype.h	/^    stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anon7
+cy	include/stb_truetype.h	/^    stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anon7
+cy1	include/stb_truetype.h	/^    stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anon7
+data	include/stb_truetype.h	/^    unsigned char  * data;              \/\/ pointer to .ttf file$/;"	m	struct:stbtt_fontinfo
+data	include/stb_truetype.h	/^    unsigned char *data;$/;"	m	struct:__anon1
+dayOfWeek_String	code/utils.h	/^global char dayOfWeek_String[7][10] = {$/;"	v
+decommit	code/allocators.h	/^    alloc_changeMemoryFunction* decommit;$/;"	m	struct:alloc_BaseMemory
+direction	include/stb_truetype.h	/^    float direction;$/;"	m	struct:stbtt__active_edge
+direction	include/stb_truetype.h	/^    int direction;$/;"	m	struct:stbtt__active_edge
+dx	include/stb_truetype.h	/^    int x,dx;$/;"	m	struct:stbtt__active_edge
+elapsed	code/sdl2_main.h	/^    f64 elapsed; \/\/ in seconds$/;"	m	struct:Clock
+elapsed	code/win32_main.h	/^    f64 elapsed; \/\/ in seconds$/;"	m	struct:Clock
+equal	include/stb_truetype.h	/^static int equal(float *a, float *b)$/;"	f
+exeFileName	code/sdl2_main.h	/^    char exeFileName[MAX_PATH];$/;"	m	struct:sdl2_State
+exeFileName	code/win32_main.h	/^    char exeFileName[MAX_PATH];$/;"	m	struct:win32_State
+ey	include/stb_truetype.h	/^    float ey;$/;"	m	struct:stbtt__active_edge
+f32	code/utils.h	/^typedef float f32;$/;"	t
+f32_epsilon	code/utils.h	/^global f32 f32_epsilon = FLT_EPSILON;$/;"	v
+f32_max	code/utils.h	/^global f32 f32_max = FLT_MAX;$/;"	v
+f32_max_exp	code/utils.h	/^global f32 f32_max_exp = FLT_MAX_EXP;$/;"	v
+f64	code/utils.h	/^typedef double f64;$/;"	t
+f64_epsilon	code/utils.h	/^global f64 f64_epsilon = DBL_EPSILON;$/;"	v
+f64_max	code/utils.h	/^global f64 f64_max = DBL_MAX;$/;"	v
+f64_max_exp	code/utils.h	/^global f64 f64_max_exp = DBL_MAX_EXP;$/;"	v
+false	code/utils.h	/^#define false /;"	d
+fdselect	include/stb_truetype.h	/^    stbtt__buf fdselect;               \/\/ map from glyph to fontdict$/;"	m	struct:stbtt_fontinfo
+fdx	include/stb_truetype.h	/^    float fx,fdx,fdy;$/;"	m	struct:stbtt__active_edge
+fdy	include/stb_truetype.h	/^    float fx,fdx,fdy;$/;"	m	struct:stbtt__active_edge
+fileFreeMemory	code/platform.h	/^    platformFileFreeMemory* fileFreeMemory;$/;"	m	struct:jed_Memory
+fileIO	code/jed.c	/^global jed_FileIO fileIO = {0};$/;"	v
+fileReadFull	code/platform.h	/^    platformFileReadFull* fileReadFull;$/;"	m	struct:jed_Memory
+fileSize	code/file.h	/^	u32 fileSize;$/;"	m	struct:BitmapHeader
+fileType	code/file.h	/^	u16 fileType;$/;"	m	struct:BitmapHeader
+fileWriteFull	code/platform.h	/^    platformFileWriteFull* fileWriteFull;$/;"	m	struct:jed_Memory
+file_bmp_load	code/file.h	/^file_bmp_load(char* fileName) {$/;"	f
+file_bmp_makeEmpty	code/file.h	/^file_bmp_makeEmpty(Arena* arena,$/;"	f
+file_font_load	code/file.h	/^file_font_load(Arena* arena,$/;"	f
+findLeastSignificantSetBit	code/jed_intrinsics.h	/^findLeastSignificantSetBit(u32 value) {$/;"	f
+first	code/utils.h	/^    Str8Node* first;$/;"	m	struct:Str8List
+first_free	include/stb_truetype.h	/^    void   *first_free;$/;"	m	struct:stbtt__hheap
+first_unicode_codepoint_in_range	include/stb_truetype.h	/^    int first_unicode_codepoint_in_range;  \/\/ if non-zero, then the chars are continuous, and this is the first codepoint$/;"	m	struct:__anon5
+first_x	include/stb_truetype.h	/^    float first_x, first_y;$/;"	m	struct:__anon15
+first_y	include/stb_truetype.h	/^    float first_x, first_y;$/;"	m	struct:__anon15
+floor_floatToI32	code/utils.h	/^floor_floatToI32(f32 number) {$/;"	f
+fontGlyphSet	code/jed.h	/^    FontGlyphSet fontGlyphSet;$/;"	m	struct:EditorState
+fontInfo	code/jed.h	/^    stbtt_fontinfo fontInfo;$/;"	m	struct:FontGlyphSet
+font_size	include/stb_truetype.h	/^    float font_size;$/;"	m	struct:__anon5
+fontdicts	include/stb_truetype.h	/^    stbtt__buf fontdicts;              \/\/ array of font dicts$/;"	m	struct:stbtt_fontinfo
+fontstart	include/stb_truetype.h	/^    int              fontstart;         \/\/ offset of start of font$/;"	m	struct:stbtt_fontinfo
+found	code/jed_intrinsics.h	/^	b32 found;$/;"	m	struct:BitscanResult
+freeMemory	code/platform.h	/^    platformFileFreeMemory* freeMemory;$/;"	m	struct:jed_FileIO
+frequency	code/sdl2_main.h	/^    f64 frequency;$/;"	m	struct:Clock
+frequency	code/win32_main.h	/^    f64 frequency;$/;"	m	struct:Clock
+ftex	include/stb_truetype.h	/^GLuint ftex;$/;"	v
+fx	include/stb_truetype.h	/^    float fx,fdx,fdy;$/;"	m	struct:stbtt__active_edge
+global	code/utils.h	/^#define global /;"	d
+glyf	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+glyph1	include/stb_truetype.h	/^    int glyph1; \/\/ use stbtt_FindGlyphIndex$/;"	m	struct:stbtt_kerningentry
+glyph2	include/stb_truetype.h	/^    int glyph2;$/;"	m	struct:stbtt_kerningentry
+glyphs	code/jed.h	/^    Bitmap* glyphs;$/;"	m	struct:FontGlyphSet
+gpos	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+greenMask	code/file.h	/^	u32 greenMask;$/;"	m	struct:BitmapHeader
+gsubrs	include/stb_truetype.h	/^    stbtt__buf gsubrs;                 \/\/ global charstring subroutines index$/;"	m	struct:stbtt_fontinfo
+h	include/stb_truetype.h	/^    int id,w,h,was_packed;$/;"	m	struct:stbrp_rect
+h	include/stb_truetype.h	/^    int w,h,stride;$/;"	m	struct:__anon8
+h_oversample	include/stb_truetype.h	/^    unsigned char h_oversample, v_oversample; \/\/ don't set these, they're used internally$/;"	m	struct:__anon5
+h_oversample	include/stb_truetype.h	/^    unsigned int   h_oversample, v_oversample;$/;"	m	struct:stbtt_pack_context
+head	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+head	include/stb_truetype.h	/^    struct stbtt__hheap_chunk *head;$/;"	m	struct:stbtt__hheap	typeref:struct:stbtt__hheap::stbtt__hheap_chunk
+height	code/file.h	/^	i32 height;$/;"	m	struct:BitmapHeader
+height	code/jed.h	/^    u32 height;$/;"	m	struct:Bitmap
+height	code/jed.h	/^    u32 height;$/;"	m	struct:jed_Backbuffer
+height	code/sdl2_main.h	/^    i32 width, height;$/;"	m	struct:sdl2_WindowDimensions
+height	code/sdl2_main.h	/^    u32 height;$/;"	m	struct:sdl2_Backbuffer
+height	code/win32_main.h	/^    i32 width, height;$/;"	m	struct:win32_WindowDimensions
+height	code/win32_main.h	/^    u32 height;$/;"	m	struct:win32_Backbuffer
+height	include/stb_truetype.h	/^    int   height;$/;"	m	struct:stbtt_pack_context
+height	include/stb_truetype.h	/^    int width,height;$/;"	m	struct:__anon17
+hhea	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+hmtx	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+horzResolution	code/file.h	/^	i32 horzResolution;$/;"	m	struct:BitmapHeader
+i16	code/utils.h	/^typedef int16_t i16;$/;"	t
+i16_max	code/utils.h	/^global i16 i16_max = (i16)0x7fff;$/;"	v
+i16_min	code/utils.h	/^global i16 i16_min = (i16)0x0000;$/;"	v
+i32	code/utils.h	/^typedef int32_t i32;$/;"	t
+i32_max	code/utils.h	/^global i32 i32_max = (i32)0x7fffffff;$/;"	v
+i32_min	code/utils.h	/^global i32 i32_min = (i32)0x00000000;$/;"	v
+i64	code/utils.h	/^typedef int64_t i64;$/;"	t
+i64_max	code/utils.h	/^global i64 i64_max = (i64)0x7fffffffffffffffllu;$/;"	v
+i64_min	code/utils.h	/^global i64 i64_min = (i64)0x0000000000000000llu;$/;"	v
+i8	code/utils.h	/^typedef int8_t i8;$/;"	t
+i8_max	code/utils.h	/^global i8 i8_max = (i8)0x7f;$/;"	v
+i8_min	code/utils.h	/^global i8 i8_min = (i8)0x00;$/;"	v
+id	include/stb_truetype.h	/^    int id,w,h,was_packed;$/;"	m	struct:stbrp_rect
+index	code/jed_intrinsics.h	/^	u32 index;$/;"	m	struct:BitscanResult
+indexToLocFormat	include/stb_truetype.h	/^    int indexToLocFormat;              \/\/ format needed to map from glyph index to glyph$/;"	m	struct:stbtt_fontinfo
+index_map	include/stb_truetype.h	/^    int index_map;                     \/\/ a cmap mapping for our chosen character encoding$/;"	m	struct:stbtt_fontinfo
+info	code/sdl2_main.h	/^    BITMAPINFO info;$/;"	m	struct:sdl2_Backbuffer
+info	code/win32_main.h	/^    BITMAPINFO info;$/;"	m	struct:win32_Backbuffer
+internal	code/utils.h	/^#define internal /;"	d
+invert	include/stb_truetype.h	/^    int invert;$/;"	m	struct:stbtt__edge
+isInitialized	code/platform.h	/^    b32 isInitialized;$/;"	m	struct:jed_Memory
+isValid	code/sdl2_main.h	/^    b32 isValid;$/;"	m	struct:sdl2_AppCode
+isValid	code/win32_main.h	/^    b32 isValid;$/;"	m	struct:win32_AppCode
+jai_strtof	code/utils.h	/^jai_strtof(readOnly char* str, char** endPtr) {$/;"	f
+jai_strtoll	code/utils.h	/^jai_strtoll(readOnly char* str, char** endPtr, i32 base) {$/;"	f
+jed_Backbuffer	code/jed.h	/^typedef struct jed_Backbuffer {$/;"	s
+jed_Backbuffer	code/jed.h	/^} jed_Backbuffer;$/;"	t	typeref:struct:jed_Backbuffer
+jed_FileIO	code/platform.h	/^typedef struct jed_FileIO {$/;"	s
+jed_FileIO	code/platform.h	/^} jed_FileIO;$/;"	t	typeref:struct:jed_FileIO
+jed_Input	code/jed.h	/^typedef struct jed_Input jed_Input;$/;"	t	typeref:struct:jed_Input
+jed_Input	code/platform.h	/^typedef struct jed_Input {$/;"	s
+jed_Input	code/platform.h	/^} jed_Input;$/;"	t	typeref:struct:jed_Input
+jed_Memory	code/jed.h	/^typedef struct jed_Memory jed_Memory;$/;"	t	typeref:struct:jed_Memory
+jed_Memory	code/platform.h	/^typedef struct jed_Memory {$/;"	s
+jed_Memory	code/platform.h	/^} jed_Memory;$/;"	t	typeref:struct:jed_Memory
+kern	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+last	code/utils.h	/^    Str8Node* last;$/;"	m	struct:Str8List
+lastModifiedTime	code/sdl2_main.h	/^    FILETIME lastModifiedTime;$/;"	m	struct:sdl2_AppCode
+lastModifiedTime	code/win32_main.h	/^    FILETIME lastModifiedTime;$/;"	m	struct:win32_AppCode
+lastTime	code/sdl2_main.h	/^    f64 lastTime;$/;"	m	struct:sdl2_State
+lastTime	code/win32_main.h	/^    f64 lastTime;$/;"	m	struct:win32_State
+leftSideBearing	code/jed.h	/^    i32* leftSideBearing;$/;"	m	struct:FontGlyphSet
+length	code/utils.h	/^    memoryIndex length;$/;"	m	struct:Str8
+lineGap	code/jed.h	/^    i32 lineGap;$/;"	m	struct:FontGlyphSet
+loca	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+localPersist	code/utils.h	/^#define localPersist /;"	d
+machine_epsilon_f32	code/utils.h	/^global f32 machine_epsilon_f32 = 1.1920929e-7f;$/;"	v
+machine_epsilon_f64	code/utils.h	/^global f64 machine_epsilon_f64 = 2.220446e-16;$/;"	v
+main	code/sdl2_main.c	/^main(void) {$/;"	f
+main	include/stb_truetype.h	/^int main(int argc, char **argv)$/;"	f
+max_x	include/stb_truetype.h	/^    stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anon15
+max_y	include/stb_truetype.h	/^    stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anon15
+memory	code/sdl2_main.h	/^    void* memory;$/;"	m	struct:sdl2_Backbuffer
+memory	code/win32_main.h	/^    void* memory;$/;"	m	struct:win32_Backbuffer
+memoryBlock	code/sdl2_main.h	/^    void* memoryBlock;$/;"	m	struct:sdl2_State
+memoryBlock	code/win32_main.h	/^    void* memoryBlock;$/;"	m	struct:win32_State
+memoryBlockStart	code/otter_allocators.h	/^    memoryIndex memoryBlockStart; \/\/ The previous offset, set using function, initialize to zero$/;"	m	struct:__anon19
+memoryBlockStart	code/utils.h	/^    memoryIndex memoryBlockStart; \/\/ The previous offset, set using function, initialize to zero$/;"	m	struct:Arena
+memoryIndex	code/utils.h	/^typedef size_t memoryIndex;$/;"	t
+min_x	include/stb_truetype.h	/^    stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anon15
+min_y	include/stb_truetype.h	/^    stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anon15
+month_String	code/utils.h	/^global char month_String[12][10] = {$/;"	v
+my_stbtt_initfont	include/stb_truetype.h	/^void my_stbtt_initfont(void)$/;"	f
+my_stbtt_print	include/stb_truetype.h	/^void my_stbtt_print(float x, float y, char *text)$/;"	f
+next	code/utils.h	/^    Str8Node* next;$/;"	m	struct:Str8Node
+next	include/stb_truetype.h	/^    struct stbtt__active_edge *next;$/;"	m	struct:stbtt__active_edge	typeref:struct:stbtt__active_edge::stbtt__active_edge
+next	include/stb_truetype.h	/^    struct stbtt__hheap_chunk *next;$/;"	m	struct:stbtt__hheap_chunk	typeref:struct:stbtt__hheap_chunk::stbtt__hheap_chunk
+nodeCount	code/utils.h	/^    u64 nodeCount;$/;"	m	struct:Str8List
+nodes	include/stb_truetype.h	/^    void  *nodes;$/;"	m	struct:stbtt_pack_context
+numGlyphs	include/stb_truetype.h	/^    int numGlyphs;                     \/\/ number of glyphs, needed for range checking$/;"	m	struct:stbtt_fontinfo
+num_chars	include/stb_truetype.h	/^    int num_chars;$/;"	m	struct:__anon5
+num_remaining_in_head_chunk	include/stb_truetype.h	/^    int    num_remaining_in_head_chunk;$/;"	m	struct:stbtt__hheap
+num_vertices	include/stb_truetype.h	/^    int num_vertices;$/;"	m	struct:__anon15
+ogAlloc_arena_alignForward	code/otter_allocators.h	/^ogAlloc_arena_alignForward(uintptr ptr,$/;"	f
+ogAlloc_arena_alloc	code/otter_allocators.h	/^ogAlloc_arena_alloc(Arena* arena,$/;"	f
+ogAlloc_arena_allocAlign	code/otter_allocators.h	/^ogAlloc_arena_allocAlign(Arena* arena,$/;"	f
+ogAlloc_arena_free	code/otter_allocators.h	/^ogAlloc_arena_free(Arena* arena) {$/;"	f
+ogAlloc_arena_initialize	code/otter_allocators.h	/^ogAlloc_arena_initialize(Arena* arena,$/;"	f
+ogAlloc_arena_resize	code/otter_allocators.h	/^ogAlloc_arena_resize(Arena* arena,$/;"	f
+ogAlloc_arena_resizeAlign	code/otter_allocators.h	/^ogAlloc_arena_resizeAlign(Arena* arena,$/;"	f
+onePastLastSlash	code/sdl2_main.h	/^    char* onePastLastSlash;$/;"	m	struct:sdl2_State
+onePastLastSlash	code/win32_main.h	/^    char* onePastLastSlash;$/;"	m	struct:win32_State
+opacity	code/win32_main.c	/^global f32 opacity = 0.95f;$/;"	v
+operatinSystemFromContext	code/utils.h	/^operatinSystemFromContext(void) {$/;"	f
+operatingSystem_String	code/utils.h	/^global char operatingSystem_String[3][8] = {$/;"	v
+pack_info	include/stb_truetype.h	/^    void *pack_info;$/;"	m	struct:stbtt_pack_context
+padding	include/stb_truetype.h	/^    int   padding;$/;"	m	struct:stbtt_pack_context
+padding	include/stb_truetype.h	/^    unsigned char type,padding;$/;"	m	struct:__anon7
+persistentStorage	code/platform.h	/^    void* persistentStorage;$/;"	m	struct:jed_Memory
+persistentStorageSize	code/platform.h	/^    u64 persistentStorageSize;$/;"	m	struct:jed_Memory
+pi_f32	code/utils.h	/^global f32 pi_f32 = 3.14159265359f;$/;"	v
+pi_f64	code/utils.h	/^global f64 pi_f64 = 3.14159265359;$/;"	v
+pitch	code/jed.h	/^    u32 pitch;$/;"	m	struct:jed_Backbuffer
+pitch	code/sdl2_main.h	/^    u32 pitch;$/;"	m	struct:sdl2_Backbuffer
+pitch	code/win32_main.h	/^    u32 pitch;$/;"	m	struct:win32_Backbuffer
+pixelStride	code/jed.h	/^    u32 pixelStride;$/;"	m	struct:jed_Backbuffer
+pixelStride	code/sdl2_main.h	/^    u32 pixelStride;$/;"	m	struct:sdl2_Backbuffer
+pixelStride	code/win32_main.h	/^    u32 pixelStride;$/;"	m	struct:win32_Backbuffer
+pixels	code/jed.h	/^    u32* pixels;$/;"	m	struct:Bitmap
+pixels	code/jed.h	/^    void* pixels;$/;"	m	struct:jed_Backbuffer
+pixels	include/stb_truetype.h	/^    unsigned char *pixels;$/;"	m	struct:__anon8
+pixels	include/stb_truetype.h	/^    unsigned char *pixels;$/;"	m	struct:stbtt_pack_context
+planes	code/file.h	/^	u16 planes;$/;"	m	struct:BitmapHeader
+platformFileFreeMemory	code/platform.h	/^typedef PLATFORM_FILE_FREE_MEMORY(platformFileFreeMemory);$/;"	t
+platformFileReadFull	code/platform.h	/^typedef PLATFORM_FILE_READ_FULL(platformFileReadFull);$/;"	t
+platformFileWriteFull	code/platform.h	/^typedef PLATFORM_FILE_WRITE_FULL(platformFileWriteFull);$/;"	t
+pressed	code/jed.c	/^global b32 pressed = true;$/;"	v
+pressedChar	code/platform.h	/^    char pressedChar;$/;"	m	struct:jed_Input
+pvertices	include/stb_truetype.h	/^    stbtt_vertex *pvertices;$/;"	m	struct:__anon15
+readFull	code/platform.h	/^    platformFileReadFull* readFull;$/;"	m	struct:jed_FileIO
+readOnly	code/utils.h	/^#define readOnly /;"	d
+redMask	code/file.h	/^	u32 redMask;$/;"	m	struct:BitmapHeader
+release	code/allocators.h	/^    alloc_changeMemoryFunction* release;$/;"	m	struct:alloc_BaseMemory
+renderer_displayCodepointGlyph	code/renderer.h	/^renderer_displayCodepointGlyph(jed_Backbuffer* videoBackbuffer,$/;"	f
+renderer_drawRectangle	code/renderer.h	/^renderer_drawRectangle(jed_Backbuffer* videoBackbuffer,$/;"	f
+renderer_paintPixel	code/renderer.h	/^renderer_paintPixel(jed_Backbuffer* videoBackbuffer,$/;"	f
+renderer_render_string	code/renderer.h	/^renderer_render_string(jed_Backbuffer* videoBackbuffer,$/;"	f
+reserve	code/allocators.h	/^    alloc_reserve* reserve;$/;"	m	struct:alloc_BaseMemory
+reserved1	code/file.h	/^	u16 reserved1;$/;"	m	struct:BitmapHeader
+reserved2	code/file.h	/^	u16 reserved2;$/;"	m	struct:BitmapHeader
+rgba_to_hex	code/utils.h	/^rgba_to_hex(u32 red, u32 green, u32 blue, u32 alpha) {$/;"	f
+round_floatToI32	code/utils.h	/^round_floatToI32(f32 number) {$/;"	f
+row	code/jed.h	/^    u32 row;$/;"	m	struct:EditorState
+running	code/sdl2_main.c	/^global b32 running = true; $/;"	v
+running	code/win32_main.c	/^global b32 running = false;$/;"	v
+s0	include/stb_truetype.h	/^    float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anon3
+s1	include/stb_truetype.h	/^    float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anon3
+scale	code/jed.h	/^    f32 scale;$/;"	m	struct:FontGlyphSet
+sdl2_AppCode	code/sdl2_main.h	/^typedef struct sdl2_AppCode {$/;"	s
+sdl2_AppCode	code/sdl2_main.h	/^} sdl2_AppCode;$/;"	t	typeref:struct:sdl2_AppCode
+sdl2_Backbuffer	code/sdl2_main.h	/^typedef struct sdl2_Backbuffer {$/;"	s
+sdl2_Backbuffer	code/sdl2_main.h	/^} sdl2_Backbuffer;$/;"	t	typeref:struct:sdl2_Backbuffer
+sdl2_State	code/sdl2_main.h	/^typedef struct sdl2_State {$/;"	s
+sdl2_State	code/sdl2_main.h	/^} sdl2_State;$/;"	t	typeref:struct:sdl2_State
+sdl2_WindowDimensions	code/sdl2_main.h	/^typedef struct sdl2_WindowDimensions {$/;"	s
+sdl2_WindowDimensions	code/sdl2_main.h	/^} sdl2_WindowDimensions;$/;"	t	typeref:struct:sdl2_WindowDimensions
+size	code/file.h	/^	u32 size;$/;"	m	struct:BitmapHeader
+size	include/stb_truetype.h	/^    int size;$/;"	m	struct:__anon1
+sizeOfBitmap	code/file.h	/^	u32 sizeOfBitmap;$/;"	m	struct:BitmapHeader
+skip_missing	include/stb_truetype.h	/^    int   skip_missing;$/;"	m	struct:stbtt_pack_context
+startTime	code/sdl2_main.h	/^    f64 startTime; \/\/ in seconds$/;"	m	struct:Clock
+startTime	code/win32_main.h	/^    f64 startTime; \/\/ in seconds$/;"	m	struct:Clock
+started	include/stb_truetype.h	/^    int started;$/;"	m	struct:__anon15
+stbrp_context	include/stb_truetype.h	/^} stbrp_context;$/;"	t	typeref:struct:__anon17
+stbrp_coord	include/stb_truetype.h	/^typedef int stbrp_coord;$/;"	t
+stbrp_init_target	include/stb_truetype.h	/^static void stbrp_init_target(stbrp_context *con, int pw, int ph, stbrp_node *nodes, int num_nodes)$/;"	f
+stbrp_node	include/stb_truetype.h	/^} stbrp_node;$/;"	t	typeref:struct:__anon18
+stbrp_pack_rects	include/stb_truetype.h	/^static void stbrp_pack_rects(stbrp_context *con, stbrp_rect *rects, int num_rects)$/;"	f
+stbrp_rect	include/stb_truetype.h	/^struct stbrp_rect$/;"	s
+stbrp_rect	include/stb_truetype.h	/^typedef struct stbrp_rect stbrp_rect;$/;"	t	typeref:struct:stbrp_rect
+stbtt_BakeFontBitmap	include/stb_truetype.h	/^STBTT_DEF int stbtt_BakeFontBitmap(const unsigned char *data, int offset,$/;"	f
+stbtt_BakeFontBitmap_internal	include/stb_truetype.h	/^static int stbtt_BakeFontBitmap_internal(unsigned char *data, int offset,  \/\/ font location (use offset=0 for plain .ttf)$/;"	f
+stbtt_CompareUTF8toUTF16_bigendian	include/stb_truetype.h	/^STBTT_DEF int stbtt_CompareUTF8toUTF16_bigendian(const char *s1, int len1, const char *s2, int len2)$/;"	f
+stbtt_CompareUTF8toUTF16_bigendian_internal	include/stb_truetype.h	/^static int stbtt_CompareUTF8toUTF16_bigendian_internal(char *s1, int len1, char *s2, int len2)$/;"	f
+stbtt_FindGlyphIndex	include/stb_truetype.h	/^STBTT_DEF int stbtt_FindGlyphIndex(const stbtt_fontinfo *info, int unicode_codepoint)$/;"	f
+stbtt_FindMatchingFont	include/stb_truetype.h	/^STBTT_DEF int stbtt_FindMatchingFont(const unsigned char *fontdata, const char *name, int flags)$/;"	f
+stbtt_FindMatchingFont_internal	include/stb_truetype.h	/^static int stbtt_FindMatchingFont_internal(unsigned char *font_collection, char *name_utf8, stbtt_int32 flags)$/;"	f
+stbtt_FindSVGDoc	include/stb_truetype.h	/^STBTT_DEF stbtt_uint8 *stbtt_FindSVGDoc(const stbtt_fontinfo *info, int gl)$/;"	f
+stbtt_FlattenCurves	include/stb_truetype.h	/^static stbtt__point *stbtt_FlattenCurves(stbtt_vertex *vertices, int num_verts, float objspace_flatness, int **contour_lengths, int *num_contours, void *userdata)$/;"	f
+stbtt_FreeBitmap	include/stb_truetype.h	/^STBTT_DEF void stbtt_FreeBitmap(unsigned char *bitmap, void *userdata)$/;"	f
+stbtt_FreeSDF	include/stb_truetype.h	/^STBTT_DEF void stbtt_FreeSDF(unsigned char *bitmap, void *userdata)$/;"	f
+stbtt_FreeShape	include/stb_truetype.h	/^STBTT_DEF void stbtt_FreeShape(const stbtt_fontinfo *info, stbtt_vertex *v)$/;"	f
+stbtt_GetBakedQuad	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetBakedQuad(const stbtt_bakedchar *chardata, int pw, int ph, int char_index, float *xpos, float *ypos, stbtt_aligned_quad *q, int opengl_fillrule)$/;"	f
+stbtt_GetCodepointBitmap	include/stb_truetype.h	/^STBTT_DEF unsigned char *stbtt_GetCodepointBitmap(const stbtt_fontinfo *info, float scale_x, float scale_y, int codepoint, int *width, int *height, int *xoff, int *yoff)$/;"	f
+stbtt_GetCodepointBitmapBox	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetCodepointBitmapBox(const stbtt_fontinfo *font, int codepoint, float scale_x, float scale_y, int *ix0, int *iy0, int *ix1, int *iy1)$/;"	f
+stbtt_GetCodepointBitmapBoxSubpixel	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetCodepointBitmapBoxSubpixel(const stbtt_fontinfo *font, int codepoint, float scale_x, float scale_y, float shift_x, float shift_y, int *ix0, int *iy0, int *ix1, int *iy1)$/;"	f
+stbtt_GetCodepointBitmapSubpixel	include/stb_truetype.h	/^STBTT_DEF unsigned char *stbtt_GetCodepointBitmapSubpixel(const stbtt_fontinfo *info, float scale_x, float scale_y, float shift_x, float shift_y, int codepoint, int *width, int *height, int *xoff, int *yoff)$/;"	f
+stbtt_GetCodepointBox	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetCodepointBox(const stbtt_fontinfo *info, int codepoint, int *x0, int *y0, int *x1, int *y1)$/;"	f
+stbtt_GetCodepointHMetrics	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetCodepointHMetrics(const stbtt_fontinfo *info, int codepoint, int *advanceWidth, int *leftSideBearing)$/;"	f
+stbtt_GetCodepointKernAdvance	include/stb_truetype.h	/^STBTT_DEF int  stbtt_GetCodepointKernAdvance(const stbtt_fontinfo *info, int ch1, int ch2)$/;"	f
+stbtt_GetCodepointSDF	include/stb_truetype.h	/^STBTT_DEF unsigned char * stbtt_GetCodepointSDF(const stbtt_fontinfo *info, float scale, int codepoint, int padding, unsigned char onedge_value, float pixel_dist_scale, int *width, int *height, int *xoff, int *yoff)$/;"	f
+stbtt_GetCodepointSVG	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetCodepointSVG(const stbtt_fontinfo *info, int unicode_codepoint, const char **svg)$/;"	f
+stbtt_GetCodepointShape	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetCodepointShape(const stbtt_fontinfo *info, int unicode_codepoint, stbtt_vertex **vertices)$/;"	f
+stbtt_GetFontBoundingBox	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetFontBoundingBox(const stbtt_fontinfo *info, int *x0, int *y0, int *x1, int *y1)$/;"	f
+stbtt_GetFontNameString	include/stb_truetype.h	/^STBTT_DEF const char *stbtt_GetFontNameString(const stbtt_fontinfo *font, int *length, int platformID, int encodingID, int languageID, int nameID)$/;"	f
+stbtt_GetFontOffsetForIndex	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetFontOffsetForIndex(const unsigned char *data, int index)$/;"	f
+stbtt_GetFontOffsetForIndex_internal	include/stb_truetype.h	/^static int stbtt_GetFontOffsetForIndex_internal(unsigned char *font_collection, int index)$/;"	f
+stbtt_GetFontVMetrics	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetFontVMetrics(const stbtt_fontinfo *info, int *ascent, int *descent, int *lineGap)$/;"	f
+stbtt_GetFontVMetricsOS2	include/stb_truetype.h	/^STBTT_DEF int  stbtt_GetFontVMetricsOS2(const stbtt_fontinfo *info, int *typoAscent, int *typoDescent, int *typoLineGap)$/;"	f
+stbtt_GetGlyphBitmap	include/stb_truetype.h	/^STBTT_DEF unsigned char *stbtt_GetGlyphBitmap(const stbtt_fontinfo *info, float scale_x, float scale_y, int glyph, int *width, int *height, int *xoff, int *yoff)$/;"	f
+stbtt_GetGlyphBitmapBox	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetGlyphBitmapBox(const stbtt_fontinfo *font, int glyph, float scale_x, float scale_y, int *ix0, int *iy0, int *ix1, int *iy1)$/;"	f
+stbtt_GetGlyphBitmapBoxSubpixel	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetGlyphBitmapBoxSubpixel(const stbtt_fontinfo *font, int glyph, float scale_x, float scale_y,float shift_x, float shift_y, int *ix0, int *iy0, int *ix1, int *iy1)$/;"	f
+stbtt_GetGlyphBitmapSubpixel	include/stb_truetype.h	/^STBTT_DEF unsigned char *stbtt_GetGlyphBitmapSubpixel(const stbtt_fontinfo *info,$/;"	f
+stbtt_GetGlyphBox	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetGlyphBox(const stbtt_fontinfo *info, int glyph_index, int *x0, int *y0, int *x1, int *y1)$/;"	f
+stbtt_GetGlyphHMetrics	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetGlyphHMetrics(const stbtt_fontinfo *info, int glyph_index, int *advanceWidth, int *leftSideBearing)$/;"	f
+stbtt_GetGlyphKernAdvance	include/stb_truetype.h	/^STBTT_DEF int  stbtt_GetGlyphKernAdvance(const stbtt_fontinfo *info, int g1, int g2)$/;"	f
+stbtt_GetGlyphSDF	include/stb_truetype.h	/^STBTT_DEF unsigned char * stbtt_GetGlyphSDF(const stbtt_fontinfo *info, float scale, int glyph, int padding, unsigned char onedge_value, float pixel_dist_scale, int *width, int *height, int *xoff, int *yoff)$/;"	f
+stbtt_GetGlyphSVG	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetGlyphSVG(const stbtt_fontinfo *info, int gl, const char **svg)$/;"	f
+stbtt_GetGlyphShape	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetGlyphShape(const stbtt_fontinfo *info, int glyph_index, stbtt_vertex **pvertices)$/;"	f
+stbtt_GetKerningTable	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetKerningTable(const stbtt_fontinfo *info, stbtt_kerningentry* table, int table_length)$/;"	f
+stbtt_GetKerningTableLength	include/stb_truetype.h	/^STBTT_DEF int  stbtt_GetKerningTableLength(const stbtt_fontinfo *info)$/;"	f
+stbtt_GetNumberOfFonts	include/stb_truetype.h	/^STBTT_DEF int stbtt_GetNumberOfFonts(const unsigned char *data)$/;"	f
+stbtt_GetNumberOfFonts_internal	include/stb_truetype.h	/^static int stbtt_GetNumberOfFonts_internal(unsigned char *font_collection)$/;"	f
+stbtt_GetPackedQuad	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetPackedQuad(const stbtt_packedchar *chardata, int pw, int ph, int char_index, float *xpos, float *ypos, stbtt_aligned_quad *q, int align_to_integer)$/;"	f
+stbtt_GetScaledFontVMetrics	include/stb_truetype.h	/^STBTT_DEF void stbtt_GetScaledFontVMetrics(const unsigned char *fontdata, int index, float size, float *ascent, float *descent, float *lineGap)$/;"	f
+stbtt_InitFont	include/stb_truetype.h	/^STBTT_DEF int stbtt_InitFont(stbtt_fontinfo *info, const unsigned char *data, int offset)$/;"	f
+stbtt_InitFont_internal	include/stb_truetype.h	/^static int stbtt_InitFont_internal(stbtt_fontinfo *info, unsigned char *data, int fontstart)$/;"	f
+stbtt_IsGlyphEmpty	include/stb_truetype.h	/^STBTT_DEF int stbtt_IsGlyphEmpty(const stbtt_fontinfo *info, int glyph_index)$/;"	f
+stbtt_MakeCodepointBitmap	include/stb_truetype.h	/^STBTT_DEF void stbtt_MakeCodepointBitmap(const stbtt_fontinfo *info, unsigned char *output, int out_w, int out_h, int out_stride, float scale_x, float scale_y, int codepoint)$/;"	f
+stbtt_MakeCodepointBitmapSubpixel	include/stb_truetype.h	/^STBTT_DEF void stbtt_MakeCodepointBitmapSubpixel(const stbtt_fontinfo *info, unsigned char *output, int out_w, int out_h, int out_stride, float scale_x, float scale_y, float shift_x, float shift_y, int codepoint)$/;"	f
+stbtt_MakeCodepointBitmapSubpixelPrefilter	include/stb_truetype.h	/^STBTT_DEF void stbtt_MakeCodepointBitmapSubpixelPrefilter(const stbtt_fontinfo *info, unsigned char *output, int out_w, int out_h, int out_stride, float scale_x, float scale_y, float shift_x, float shift_y, int oversample_x, int oversample_y, float *sub_x, float *sub_y, int codepoint)$/;"	f
+stbtt_MakeGlyphBitmap	include/stb_truetype.h	/^STBTT_DEF void stbtt_MakeGlyphBitmap(const stbtt_fontinfo *info, unsigned char *output, int out_w, int out_h, int out_stride, float scale_x, float scale_y, int glyph)$/;"	f
+stbtt_MakeGlyphBitmapSubpixel	include/stb_truetype.h	/^STBTT_DEF void stbtt_MakeGlyphBitmapSubpixel(const stbtt_fontinfo *info, unsigned char *output, int out_w, int out_h, int out_stride, float scale_x, float scale_y, float shift_x, float shift_y, int glyph)$/;"	f
+stbtt_MakeGlyphBitmapSubpixelPrefilter	include/stb_truetype.h	/^STBTT_DEF void stbtt_MakeGlyphBitmapSubpixelPrefilter(const stbtt_fontinfo *info, unsigned char *output, int out_w, int out_h, int out_stride, float scale_x, float scale_y, float shift_x, float shift_y, int prefilter_x, int prefilter_y, float *sub_x, float *sub_y, int glyph)$/;"	f
+stbtt_PackBegin	include/stb_truetype.h	/^STBTT_DEF int stbtt_PackBegin(stbtt_pack_context *spc, unsigned char *pixels, int pw, int ph, int stride_in_bytes, int padding, void *alloc_context)$/;"	f
+stbtt_PackEnd	include/stb_truetype.h	/^STBTT_DEF void stbtt_PackEnd  (stbtt_pack_context *spc)$/;"	f
+stbtt_PackFontRange	include/stb_truetype.h	/^STBTT_DEF int stbtt_PackFontRange(stbtt_pack_context *spc, const unsigned char *fontdata, int font_index, float font_size,$/;"	f
+stbtt_PackFontRanges	include/stb_truetype.h	/^STBTT_DEF int stbtt_PackFontRanges(stbtt_pack_context *spc, const unsigned char *fontdata, int font_index, stbtt_pack_range *ranges, int num_ranges)$/;"	f
+stbtt_PackFontRangesGatherRects	include/stb_truetype.h	/^STBTT_DEF int stbtt_PackFontRangesGatherRects(stbtt_pack_context *spc, const stbtt_fontinfo *info, stbtt_pack_range *ranges, int num_ranges, stbrp_rect *rects)$/;"	f
+stbtt_PackFontRangesPackRects	include/stb_truetype.h	/^STBTT_DEF void stbtt_PackFontRangesPackRects(stbtt_pack_context *spc, stbrp_rect *rects, int num_rects)$/;"	f
+stbtt_PackFontRangesRenderIntoRects	include/stb_truetype.h	/^STBTT_DEF int stbtt_PackFontRangesRenderIntoRects(stbtt_pack_context *spc, const stbtt_fontinfo *info, stbtt_pack_range *ranges, int num_ranges, stbrp_rect *rects)$/;"	f
+stbtt_PackSetOversampling	include/stb_truetype.h	/^STBTT_DEF void stbtt_PackSetOversampling(stbtt_pack_context *spc, unsigned int h_oversample, unsigned int v_oversample)$/;"	f
+stbtt_PackSetSkipMissingCodepoints	include/stb_truetype.h	/^STBTT_DEF void stbtt_PackSetSkipMissingCodepoints(stbtt_pack_context *spc, int skip)$/;"	f
+stbtt_Rasterize	include/stb_truetype.h	/^STBTT_DEF void stbtt_Rasterize(stbtt__bitmap *result, float flatness_in_pixels, stbtt_vertex *vertices, int num_verts, float scale_x, float scale_y, float shift_x, float shift_y, int x_off, int y_off, int invert, void *userdata)$/;"	f
+stbtt_ScaleForMappingEmToPixels	include/stb_truetype.h	/^STBTT_DEF float stbtt_ScaleForMappingEmToPixels(const stbtt_fontinfo *info, float pixels)$/;"	f
+stbtt_ScaleForPixelHeight	include/stb_truetype.h	/^STBTT_DEF float stbtt_ScaleForPixelHeight(const stbtt_fontinfo *info, float height)$/;"	f
+stbtt__CompareUTF8toUTF16_bigendian_prefix	include/stb_truetype.h	/^static stbtt_int32 stbtt__CompareUTF8toUTF16_bigendian_prefix(stbtt_uint8 *s1, stbtt_int32 len1, stbtt_uint8 *s2, stbtt_int32 len2)$/;"	f
+stbtt__GetCoverageIndex	include/stb_truetype.h	/^static stbtt_int32 stbtt__GetCoverageIndex(stbtt_uint8 *coverageTable, int glyph)$/;"	f
+stbtt__GetGlyfOffset	include/stb_truetype.h	/^static int stbtt__GetGlyfOffset(const stbtt_fontinfo *info, int glyph_index)$/;"	f
+stbtt__GetGlyphClass	include/stb_truetype.h	/^static stbtt_int32  stbtt__GetGlyphClass(stbtt_uint8 *classDefTable, int glyph)$/;"	f
+stbtt__GetGlyphGPOSInfoAdvance	include/stb_truetype.h	/^static stbtt_int32 stbtt__GetGlyphGPOSInfoAdvance(const stbtt_fontinfo *info, int glyph1, int glyph2)$/;"	f
+stbtt__GetGlyphInfoT2	include/stb_truetype.h	/^static int stbtt__GetGlyphInfoT2(const stbtt_fontinfo *info, int glyph_index, int *x0, int *y0, int *x1, int *y1)$/;"	f
+stbtt__GetGlyphKernInfoAdvance	include/stb_truetype.h	/^static int stbtt__GetGlyphKernInfoAdvance(const stbtt_fontinfo *info, int glyph1, int glyph2)$/;"	f
+stbtt__GetGlyphShapeT2	include/stb_truetype.h	/^static int stbtt__GetGlyphShapeT2(const stbtt_fontinfo *info, int glyph_index, stbtt_vertex **pvertices)$/;"	f
+stbtt__GetGlyphShapeTT	include/stb_truetype.h	/^static int stbtt__GetGlyphShapeTT(const stbtt_fontinfo *info, int glyph_index, stbtt_vertex **pvertices)$/;"	f
+stbtt__active_edge	include/stb_truetype.h	/^typedef struct stbtt__active_edge$/;"	s
+stbtt__active_edge	include/stb_truetype.h	/^} stbtt__active_edge;$/;"	t	typeref:struct:stbtt__active_edge
+stbtt__add_point	include/stb_truetype.h	/^static void stbtt__add_point(stbtt__point *points, int n, float x, float y)$/;"	f
+stbtt__bitmap	include/stb_truetype.h	/^} stbtt__bitmap;$/;"	t	typeref:struct:__anon8
+stbtt__buf	include/stb_truetype.h	/^} stbtt__buf;$/;"	t	typeref:struct:__anon1
+stbtt__buf_get	include/stb_truetype.h	/^static stbtt_uint32 stbtt__buf_get(stbtt__buf *b, int n)$/;"	f
+stbtt__buf_get16	include/stb_truetype.h	/^#define stbtt__buf_get16(/;"	d
+stbtt__buf_get32	include/stb_truetype.h	/^#define stbtt__buf_get32(/;"	d
+stbtt__buf_get8	include/stb_truetype.h	/^static stbtt_uint8 stbtt__buf_get8(stbtt__buf *b)$/;"	f
+stbtt__buf_peek8	include/stb_truetype.h	/^static stbtt_uint8 stbtt__buf_peek8(stbtt__buf *b)$/;"	f
+stbtt__buf_range	include/stb_truetype.h	/^static stbtt__buf stbtt__buf_range(const stbtt__buf *b, int o, int s)$/;"	f
+stbtt__buf_seek	include/stb_truetype.h	/^static void stbtt__buf_seek(stbtt__buf *b, int o)$/;"	f
+stbtt__buf_skip	include/stb_truetype.h	/^static void stbtt__buf_skip(stbtt__buf *b, int o)$/;"	f
+stbtt__cff_get_index	include/stb_truetype.h	/^static stbtt__buf stbtt__cff_get_index(stbtt__buf *b)$/;"	f
+stbtt__cff_index_count	include/stb_truetype.h	/^static int stbtt__cff_index_count(stbtt__buf *b)$/;"	f
+stbtt__cff_index_get	include/stb_truetype.h	/^static stbtt__buf stbtt__cff_index_get(stbtt__buf b, int i)$/;"	f
+stbtt__cff_int	include/stb_truetype.h	/^static stbtt_uint32 stbtt__cff_int(stbtt__buf *b)$/;"	f
+stbtt__cff_skip_operand	include/stb_truetype.h	/^static void stbtt__cff_skip_operand(stbtt__buf *b) {$/;"	f
+stbtt__check_size16	include/stb_truetype.h	/^typedef char stbtt__check_size16[sizeof(stbtt_int16)==2 ? 1 : -1];$/;"	t
+stbtt__check_size32	include/stb_truetype.h	/^typedef char stbtt__check_size32[sizeof(stbtt_int32)==4 ? 1 : -1];$/;"	t
+stbtt__cid_get_glyph_subrs	include/stb_truetype.h	/^static stbtt__buf stbtt__cid_get_glyph_subrs(const stbtt_fontinfo *info, int glyph_index)$/;"	f
+stbtt__close_shape	include/stb_truetype.h	/^static int stbtt__close_shape(stbtt_vertex *vertices, int num_vertices, int was_off, int start_off,$/;"	f
+stbtt__compute_crossings_x	include/stb_truetype.h	/^static int stbtt__compute_crossings_x(float x, float y, int nverts, stbtt_vertex *verts)$/;"	f
+stbtt__csctx	include/stb_truetype.h	/^} stbtt__csctx;$/;"	t	typeref:struct:__anon15
+stbtt__csctx_close_shape	include/stb_truetype.h	/^static void stbtt__csctx_close_shape(stbtt__csctx *ctx)$/;"	f
+stbtt__csctx_rccurve_to	include/stb_truetype.h	/^static void stbtt__csctx_rccurve_to(stbtt__csctx *ctx, float dx1, float dy1, float dx2, float dy2, float dx3, float dy3)$/;"	f
+stbtt__csctx_rline_to	include/stb_truetype.h	/^static void stbtt__csctx_rline_to(stbtt__csctx *ctx, float dx, float dy)$/;"	f
+stbtt__csctx_rmove_to	include/stb_truetype.h	/^static void stbtt__csctx_rmove_to(stbtt__csctx *ctx, float dx, float dy)$/;"	f
+stbtt__csctx_v	include/stb_truetype.h	/^static void stbtt__csctx_v(stbtt__csctx *c, stbtt_uint8 type, stbtt_int32 x, stbtt_int32 y, stbtt_int32 cx, stbtt_int32 cy, stbtt_int32 cx1, stbtt_int32 cy1)$/;"	f
+stbtt__cuberoot	include/stb_truetype.h	/^static float stbtt__cuberoot( float x )$/;"	f
+stbtt__dict_get	include/stb_truetype.h	/^static stbtt__buf stbtt__dict_get(stbtt__buf *b, int key)$/;"	f
+stbtt__dict_get_ints	include/stb_truetype.h	/^static void stbtt__dict_get_ints(stbtt__buf *b, int key, int outcount, stbtt_uint32 *out)$/;"	f
+stbtt__edge	include/stb_truetype.h	/^typedef struct stbtt__edge {$/;"	s
+stbtt__edge	include/stb_truetype.h	/^} stbtt__edge;$/;"	t	typeref:struct:stbtt__edge
+stbtt__fill_active_edges	include/stb_truetype.h	/^static void stbtt__fill_active_edges(unsigned char *scanline, int len, stbtt__active_edge *e, int max_weight)$/;"	f
+stbtt__fill_active_edges_new	include/stb_truetype.h	/^static void stbtt__fill_active_edges_new(float *scanline, float *scanline_fill, int len, stbtt__active_edge *e, float y_top)$/;"	f
+stbtt__find_table	include/stb_truetype.h	/^static stbtt_uint32 stbtt__find_table(stbtt_uint8 *data, stbtt_uint32 fontstart, const char *tag)$/;"	f
+stbtt__get_subr	include/stb_truetype.h	/^static stbtt__buf stbtt__get_subr(stbtt__buf idx, int n)$/;"	f
+stbtt__get_subrs	include/stb_truetype.h	/^static stbtt__buf stbtt__get_subrs(stbtt__buf cff, stbtt__buf fontdict)$/;"	f
+stbtt__get_svg	include/stb_truetype.h	/^static int stbtt__get_svg(stbtt_fontinfo *info)$/;"	f
+stbtt__h_prefilter	include/stb_truetype.h	/^static void stbtt__h_prefilter(unsigned char *pixels, int w, int h, int stride_in_bytes, unsigned int kernel_width)$/;"	f
+stbtt__handle_clipped_edge	include/stb_truetype.h	/^static void stbtt__handle_clipped_edge(float *scanline, int x, stbtt__active_edge *e, float x0, float y0, float x1, float y1)$/;"	f
+stbtt__hheap	include/stb_truetype.h	/^typedef struct stbtt__hheap$/;"	s
+stbtt__hheap	include/stb_truetype.h	/^} stbtt__hheap;$/;"	t	typeref:struct:stbtt__hheap
+stbtt__hheap_alloc	include/stb_truetype.h	/^static void *stbtt__hheap_alloc(stbtt__hheap *hh, size_t size, void *userdata)$/;"	f
+stbtt__hheap_chunk	include/stb_truetype.h	/^typedef struct stbtt__hheap_chunk$/;"	s
+stbtt__hheap_chunk	include/stb_truetype.h	/^} stbtt__hheap_chunk;$/;"	t	typeref:struct:stbtt__hheap_chunk
+stbtt__hheap_cleanup	include/stb_truetype.h	/^static void stbtt__hheap_cleanup(stbtt__hheap *hh, void *userdata)$/;"	f
+stbtt__hheap_free	include/stb_truetype.h	/^static void stbtt__hheap_free(stbtt__hheap *hh, void *p)$/;"	f
+stbtt__isfont	include/stb_truetype.h	/^static int stbtt__isfont(stbtt_uint8 *font)$/;"	f
+stbtt__matches	include/stb_truetype.h	/^static int stbtt__matches(stbtt_uint8 *fc, stbtt_uint32 offset, stbtt_uint8 *name, stbtt_int32 flags)$/;"	f
+stbtt__matchpair	include/stb_truetype.h	/^static int stbtt__matchpair(stbtt_uint8 *fc, stbtt_uint32 nm, stbtt_uint8 *name, stbtt_int32 nlen, stbtt_int32 target_id, stbtt_int32 next_id)$/;"	f
+stbtt__new_active	include/stb_truetype.h	/^static stbtt__active_edge *stbtt__new_active(stbtt__hheap *hh, stbtt__edge *e, int off_x, float start_point, void *userdata)$/;"	f
+stbtt__new_buf	include/stb_truetype.h	/^static stbtt__buf stbtt__new_buf(const void *p, size_t size)$/;"	f
+stbtt__oversample_shift	include/stb_truetype.h	/^static float stbtt__oversample_shift(int oversample)$/;"	f
+stbtt__point	include/stb_truetype.h	/^} stbtt__point;$/;"	t	typeref:struct:__anon16
+stbtt__position_trapezoid_area	include/stb_truetype.h	/^static float stbtt__position_trapezoid_area(float height, float tx0, float tx1, float bx0, float bx1)$/;"	f
+stbtt__rasterize	include/stb_truetype.h	/^static void stbtt__rasterize(stbtt__bitmap *result, stbtt__point *pts, int *wcount, int windings, float scale_x, float scale_y, float shift_x, float shift_y, int off_x, int off_y, int invert, void *userdata)$/;"	f
+stbtt__rasterize_sorted_edges	include/stb_truetype.h	/^static void stbtt__rasterize_sorted_edges(stbtt__bitmap *result, stbtt__edge *e, int n, int vsubsample, int off_x, int off_y, void *userdata)$/;"	f
+stbtt__ray_intersect_bezier	include/stb_truetype.h	/^static int stbtt__ray_intersect_bezier(float orig[2], float ray[2], float q0[2], float q1[2], float q2[2], float hits[2][2])$/;"	f
+stbtt__run_charstring	include/stb_truetype.h	/^static int stbtt__run_charstring(const stbtt_fontinfo *info, int glyph_index, stbtt__csctx *c)$/;"	f
+stbtt__sized_trapezoid_area	include/stb_truetype.h	/^static float stbtt__sized_trapezoid_area(float height, float top_width, float bottom_width)$/;"	f
+stbtt__sized_triangle_area	include/stb_truetype.h	/^static float stbtt__sized_triangle_area(float height, float width)$/;"	f
+stbtt__solve_cubic	include/stb_truetype.h	/^static int stbtt__solve_cubic(float a, float b, float c, float* r)$/;"	f
+stbtt__sort_edges	include/stb_truetype.h	/^static void stbtt__sort_edges(stbtt__edge *p, int n)$/;"	f
+stbtt__sort_edges_ins_sort	include/stb_truetype.h	/^static void stbtt__sort_edges_ins_sort(stbtt__edge *p, int n)$/;"	f
+stbtt__sort_edges_quicksort	include/stb_truetype.h	/^static void stbtt__sort_edges_quicksort(stbtt__edge *p, int n)$/;"	f
+stbtt__tesselate_cubic	include/stb_truetype.h	/^static void stbtt__tesselate_cubic(stbtt__point *points, int *num_points, float x0, float y0, float x1, float y1, float x2, float y2, float x3, float y3, float objspace_flatness_squared, int n)$/;"	f
+stbtt__tesselate_curve	include/stb_truetype.h	/^static int stbtt__tesselate_curve(stbtt__point *points, int *num_points, float x0, float y0, float x1, float y1, float x2, float y2, float objspace_flatness_squared, int n)$/;"	f
+stbtt__test_oversample_pow2	include/stb_truetype.h	/^typedef int stbtt__test_oversample_pow2[(STBTT_MAX_OVERSAMPLE & (STBTT_MAX_OVERSAMPLE-1)) == 0 ? 1 : -1];$/;"	t
+stbtt__track_vertex	include/stb_truetype.h	/^static void stbtt__track_vertex(stbtt__csctx *c, stbtt_int32 x, stbtt_int32 y)$/;"	f
+stbtt__v_prefilter	include/stb_truetype.h	/^static void stbtt__v_prefilter(unsigned char *pixels, int w, int h, int stride_in_bytes, unsigned int kernel_width)$/;"	f
+stbtt_aligned_quad	include/stb_truetype.h	/^} stbtt_aligned_quad;$/;"	t	typeref:struct:__anon3
+stbtt_bakedchar	include/stb_truetype.h	/^} stbtt_bakedchar;$/;"	t	typeref:struct:__anon2
+stbtt_fontinfo	include/stb_truetype.h	/^struct stbtt_fontinfo$/;"	s
+stbtt_fontinfo	include/stb_truetype.h	/^typedef struct stbtt_fontinfo stbtt_fontinfo;$/;"	t	typeref:struct:stbtt_fontinfo
+stbtt_int16	include/stb_truetype.h	/^typedef signed   short  stbtt_int16;$/;"	t
+stbtt_int32	include/stb_truetype.h	/^typedef signed   int    stbtt_int32;$/;"	t
+stbtt_int8	include/stb_truetype.h	/^typedef signed   char   stbtt_int8;$/;"	t
+stbtt_kerningentry	include/stb_truetype.h	/^typedef struct stbtt_kerningentry$/;"	s
+stbtt_kerningentry	include/stb_truetype.h	/^} stbtt_kerningentry;$/;"	t	typeref:struct:stbtt_kerningentry
+stbtt_pack_context	include/stb_truetype.h	/^struct stbtt_pack_context {$/;"	s
+stbtt_pack_context	include/stb_truetype.h	/^typedef struct stbtt_pack_context stbtt_pack_context;$/;"	t	typeref:struct:stbtt_pack_context
+stbtt_pack_range	include/stb_truetype.h	/^} stbtt_pack_range;$/;"	t	typeref:struct:__anon5
+stbtt_packedchar	include/stb_truetype.h	/^} stbtt_packedchar;$/;"	t	typeref:struct:__anon4
+stbtt_setvertex	include/stb_truetype.h	/^static void stbtt_setvertex(stbtt_vertex *v, stbtt_uint8 type, stbtt_int32 x, stbtt_int32 y, stbtt_int32 cx, stbtt_int32 cy)$/;"	f
+stbtt_tag	include/stb_truetype.h	/^#define stbtt_tag(/;"	d
+stbtt_tag4	include/stb_truetype.h	/^#define stbtt_tag4(/;"	d
+stbtt_uint16	include/stb_truetype.h	/^typedef unsigned short  stbtt_uint16;$/;"	t
+stbtt_uint32	include/stb_truetype.h	/^typedef unsigned int    stbtt_uint32;$/;"	t
+stbtt_uint8	include/stb_truetype.h	/^typedef unsigned char   stbtt_uint8;$/;"	t
+stbtt_vertex	include/stb_truetype.h	/^} stbtt_vertex;$/;"	t	typeref:struct:__anon7
+stbtt_vertex_type	include/stb_truetype.h	/^#define stbtt_vertex_type /;"	d
+str	code/utils.h	/^    char* str;$/;"	m	struct:Str8
+str8_chop	code/utils.h	/^str8_chop(Str8 str, memoryIndex amount) {$/;"	f
+str8_init	code/utils.h	/^str8_init(char* str, memoryIndex size) {$/;"	f
+str8_postfix	code/utils.h	/^str8_postfix(Str8 str, memoryIndex size) {$/;"	f
+str8_prefix	code/utils.h	/^str8_prefix(Str8 str, memoryIndex size) {$/;"	f
+str8_skip	code/utils.h	/^str8_skip(Str8 str, memoryIndex amount) {$/;"	f
+stride	include/stb_truetype.h	/^    int w,h,stride;$/;"	m	struct:__anon8
+stride_in_bytes	include/stb_truetype.h	/^    int   stride_in_bytes;$/;"	m	struct:stbtt_pack_context
+string	code/utils.h	/^    Str8 string;$/;"	m	struct:Str8Node
+stringFromArchitecure	code/utils.h	/^stringFromArchitecure(Architecture arch) {$/;"	f
+stringFromDayOfWeek	code/utils.h	/^stringFromDayOfWeek(DayOfWeek dayOfWeek) {$/;"	f
+stringFromMonth	code/utils.h	/^stringFromMonth(Month month) {$/;"	f
+stringFromOperatingSystem	code/utils.h	/^stringFromOperatingSystem(OperatingSystem os) {$/;"	f
+stringLength	code/utils.h	/^stringLength(char* string) {$/;"	f
+subrs	include/stb_truetype.h	/^    stbtt__buf subrs;                  \/\/ private charstring subroutines index$/;"	m	struct:stbtt_fontinfo
+svg	include/stb_truetype.h	/^    int loca,head,glyf,hhea,hmtx,kern,gpos,svg; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo
+sy	include/stb_truetype.h	/^    float sy;$/;"	m	struct:stbtt__active_edge
+t0	include/stb_truetype.h	/^    float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anon3
+t1	include/stb_truetype.h	/^    float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anon3
+tau_f32	code/utils.h	/^global f32 tau_f32 = 6.28318530718f;$/;"	v
+tau_f64	code/utils.h	/^global f64 tau_f64 = 6.28318530718;$/;"	v
+temp_bitmap	include/stb_truetype.h	/^unsigned char temp_bitmap[512*512];$/;"	v
+test	code/jed.c	/^global Str8 test;$/;"	v
+testIndex	code/jed.c	/^global memoryIndex testIndex;$/;"	v
+totalSize	code/sdl2_main.h	/^    u64 totalSize;$/;"	m	struct:sdl2_State
+totalSize	code/utils.h	/^    u64 totalSize;$/;"	m	struct:Str8List
+totalSize	code/win32_main.h	/^    u64 totalSize;$/;"	m	struct:win32_State
+transientStorage	code/platform.h	/^    void* transientStorage;$/;"	m	struct:jed_Memory
+transientStorageSize	code/platform.h	/^    u64 transientStorageSize;$/;"	m	struct:jed_Memory
+true	code/utils.h	/^#define true /;"	d
+truncate_floatToI32	code/utils.h	/^truncate_floatToI32(f32 number) {$/;"	f
+truncate_safe_i64	code/utils.h	/^truncate_safe_i64(i64 value) {$/;"	f
+ttBYTE	include/stb_truetype.h	/^#define ttBYTE(/;"	d
+ttCHAR	include/stb_truetype.h	/^#define ttCHAR(/;"	d
+ttFixed	include/stb_truetype.h	/^#define ttFixed(/;"	d
+ttLONG	include/stb_truetype.h	/^static stbtt_int32 ttLONG(stbtt_uint8 *p)    { return (p[0]<<24) + (p[1]<<16) + (p[2]<<8) + p[3]; }$/;"	f
+ttSHORT	include/stb_truetype.h	/^static stbtt_int16 ttSHORT(stbtt_uint8 *p)   { return p[0]*256 + p[1]; }$/;"	f
+ttULONG	include/stb_truetype.h	/^static stbtt_uint32 ttULONG(stbtt_uint8 *p)  { return (p[0]<<24) + (p[1]<<16) + (p[2]<<8) + p[3]; }$/;"	f
+ttUSHORT	include/stb_truetype.h	/^static stbtt_uint16 ttUSHORT(stbtt_uint8 *p) { return p[0]*256 + p[1]; }$/;"	f
+ttfFile	code/jed.h	/^    FileReadResult* ttfFile;$/;"	m	struct:FontGlyphSet
+ttf_buffer	include/stb_truetype.h	/^char ttf_buffer[1<<25];$/;"	v
+ttf_buffer	include/stb_truetype.h	/^unsigned char ttf_buffer[1<<20];$/;"	v
+type	include/stb_truetype.h	/^    unsigned char type,padding;$/;"	m	struct:__anon7
+u16	code/utils.h	/^typedef uint16_t u16;$/;"	t
+u16_min	code/utils.h	/^global u16 u16_min = (u16)0xffff;$/;"	v
+u32	code/utils.h	/^typedef uint32_t u32;$/;"	t
+u32_min	code/utils.h	/^global u32 u32_min = (u32)0xffffffff;$/;"	v
+u64	code/utils.h	/^typedef uint64_t u64;$/;"	t
+u64_min	code/utils.h	/^global u64 u64_min = (u64)0xffffffffffffffffllu;$/;"	v
+u8	code/utils.h	/^typedef uint8_t u8;$/;"	t
+u8_min	code/utils.h	/^global u8 u8_min = (u8)0xff;$/;"	v
+uint	code/utils.h	/^typedef unsigned int uint;$/;"	t
+uintptr	code/utils.h	/^typedef uintptr_t uintptr;$/;"	t
+uintptr_t	code/utils.h	/^typedef u64 uintptr_t;$/;"	t
+updateAndRender	code/sdl2_main.h	/^    app_updateAndRender* updateAndRender;$/;"	m	struct:sdl2_AppCode
+updateAndRender	code/win32_main.h	/^    app_updateAndRender* updateAndRender;$/;"	m	struct:win32_AppCode
+user_allocator_context	include/stb_truetype.h	/^    void *user_allocator_context;$/;"	m	struct:stbtt_pack_context
+userdata	include/stb_truetype.h	/^    void           * userdata;$/;"	m	struct:stbtt_fontinfo
+v_oversample	include/stb_truetype.h	/^    unsigned char h_oversample, v_oversample; \/\/ don't set these, they're used internally$/;"	m	struct:__anon5
+v_oversample	include/stb_truetype.h	/^    unsigned int   h_oversample, v_oversample;$/;"	m	struct:stbtt_pack_context
+vertResolution	code/file.h	/^	i32 vertResolution;$/;"	m	struct:BitmapHeader
+void_function	code/utils.h	/^typedef void void_function(void);$/;"	t
+w	include/stb_truetype.h	/^    int id,w,h,was_packed;$/;"	m	struct:stbrp_rect
+w	include/stb_truetype.h	/^    int w,h,stride;$/;"	m	struct:__anon8
+was_packed	include/stb_truetype.h	/^    int id,w,h,was_packed;$/;"	m	struct:stbrp_rect
+width	code/file.h	/^	i32 width;$/;"	m	struct:BitmapHeader
+width	code/jed.h	/^    u32 width;$/;"	m	struct:Bitmap
+width	code/jed.h	/^    u32 width;$/;"	m	struct:jed_Backbuffer
+width	code/sdl2_main.h	/^    i32 width, height;$/;"	m	struct:sdl2_WindowDimensions
+width	code/sdl2_main.h	/^    u32 width;$/;"	m	struct:sdl2_Backbuffer
+width	code/win32_main.h	/^    i32 width, height;$/;"	m	struct:win32_WindowDimensions
+width	code/win32_main.h	/^    u32 width;$/;"	m	struct:win32_Backbuffer
+width	include/stb_truetype.h	/^    int   width;$/;"	m	struct:stbtt_pack_context
+width	include/stb_truetype.h	/^    int width,height;$/;"	m	struct:__anon17
+win32_AppCode	code/win32_main.h	/^typedef struct win32_AppCode {$/;"	s
+win32_AppCode	code/win32_main.h	/^} win32_AppCode;$/;"	t	typeref:struct:win32_AppCode
+win32_Backbuffer	code/win32_main.h	/^typedef struct win32_Backbuffer {$/;"	s
+win32_Backbuffer	code/win32_main.h	/^} win32_Backbuffer;$/;"	t	typeref:struct:win32_Backbuffer
+win32_State	code/win32_main.h	/^typedef struct win32_State {$/;"	s
+win32_State	code/win32_main.h	/^} win32_State;$/;"	t	typeref:struct:win32_State
+win32_WindowDimensions	code/win32_main.h	/^typedef struct win32_WindowDimensions {$/;"	s
+win32_WindowDimensions	code/win32_main.h	/^} win32_WindowDimensions;$/;"	t	typeref:struct:win32_WindowDimensions
+win32_backbuffer	code/win32_main.c	/^global win32_Backbuffer win32_backbuffer = { .pixelStride = 4 };$/;"	v
+win32_buildExePathFileName	code/win32_main.c	/^win32_buildExePathFileName(win32_State* state,$/;"	f
+win32_console_print	code/win32_main.c	/^win32_console_print(char* message) {$/;"	f
+win32_console_printError	code/win32_main.c	/^win32_console_printError(char* message) {$/;"	f
+win32_file_freeMemory	code/win32_main.c	/^win32_file_freeMemory(FileReadResult file) {$/;"	f
+win32_file_getModifiedTime	code/win32_main.c	/^win32_file_getModifiedTime(char* fileName) {$/;"	f
+win32_file_readFull	code/win32_main.c	/^win32_file_readFull(char* fileName) {$/;"	f
+win32_file_writeFull	code/win32_main.c	/^win32_file_writeFull(char* fileName,$/;"	f
+win32_getExeFileName	code/win32_main.c	/^win32_getExeFileName(win32_State* state) {$/;"	f
+win32_getLastWriteTime	code/win32_main.c	/^win32_getLastWriteTime(char* fileName) {$/;"	f
+win32_loadAppDLL	code/win32_main.c	/^win32_loadAppDLL(char* sourceDLLName,$/;"	f
+win32_mainWindowCallback	code/win32_main.c	/^win32_mainWindowCallback(HWND window,$/;"	f
+win32_processWindowMessages	code/win32_main.c	/^win32_processWindowMessages(jed_Input* input) {$/;"	f
+win32_unloadAppCode	code/win32_main.c	/^win32_unloadAppCode(win32_AppCode* appCode) {$/;"	f
+win32_videoBuffer_clear	code/win32_main.c	/^win32_videoBuffer_clear() {$/;"	f
+win32_window_getDimensions	code/win32_main.c	/^win32_window_getDimensions(HWND window) {$/;"	f
+win32_window_resizeDIBSection	code/win32_main.c	/^win32_window_resizeDIBSection(u32 width, u32 height) {$/;"	f
+win32_window_update	code/win32_main.c	/^win32_window_update(HDC deviceContext,$/;"	f
+writeFull	code/platform.h	/^    platformFileWriteFull* writeFull;$/;"	m	struct:jed_FileIO
+x	include/stb_truetype.h	/^    float x, y;$/;"	m	struct:__anon15
+x	include/stb_truetype.h	/^    float x,y;$/;"	m	struct:__anon16
+x	include/stb_truetype.h	/^    int x,dx;$/;"	m	struct:stbtt__active_edge
+x	include/stb_truetype.h	/^    int x,y,bottom_y;$/;"	m	struct:__anon17
+x	include/stb_truetype.h	/^    stbrp_coord x,y;$/;"	m	struct:stbrp_rect
+x	include/stb_truetype.h	/^    stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anon7
+x	include/stb_truetype.h	/^    unsigned char x;$/;"	m	struct:__anon18
+x0	include/stb_truetype.h	/^    float x0,y0, x1,y1;$/;"	m	struct:stbtt__edge
+x0	include/stb_truetype.h	/^    float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anon3
+x0	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon2
+x0	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon4
+x1	include/stb_truetype.h	/^    float x0,y0, x1,y1;$/;"	m	struct:stbtt__edge
+x1	include/stb_truetype.h	/^    float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anon3
+x1	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon2
+x1	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon4
+xOffset	code/jed.h	/^    i32* xOffset;$/;"	m	struct:FontGlyphSet
+xadvance	include/stb_truetype.h	/^    float xoff,yoff,xadvance;$/;"	m	struct:__anon2
+xadvance	include/stb_truetype.h	/^    float xoff,yoff,xadvance;$/;"	m	struct:__anon4
+xoff	include/stb_truetype.h	/^    float xoff,yoff,xadvance;$/;"	m	struct:__anon2
+xoff	include/stb_truetype.h	/^    float xoff,yoff,xadvance;$/;"	m	struct:__anon4
+xoff2	include/stb_truetype.h	/^    float xoff2,yoff2;$/;"	m	struct:__anon4
+y	include/stb_truetype.h	/^    float x, y;$/;"	m	struct:__anon15
+y	include/stb_truetype.h	/^    float x,y;$/;"	m	struct:__anon16
+y	include/stb_truetype.h	/^    int x,y,bottom_y;$/;"	m	struct:__anon17
+y	include/stb_truetype.h	/^    stbrp_coord x,y;$/;"	m	struct:stbrp_rect
+y	include/stb_truetype.h	/^    stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anon7
+y0	include/stb_truetype.h	/^    float x0,y0, x1,y1;$/;"	m	struct:stbtt__edge
+y0	include/stb_truetype.h	/^    float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anon3
+y0	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon2
+y0	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon4
+y1	include/stb_truetype.h	/^    float x0,y0, x1,y1;$/;"	m	struct:stbtt__edge
+y1	include/stb_truetype.h	/^    float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anon3
+y1	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon2
+y1	include/stb_truetype.h	/^    unsigned short x0,y0,x1,y1; \/\/ coordinates of bbox in bitmap$/;"	m	struct:__anon4
+yOffset	code/jed.h	/^    i32* yOffset;$/;"	m	struct:FontGlyphSet
+yoff	include/stb_truetype.h	/^    float xoff,yoff,xadvance;$/;"	m	struct:__anon2
+yoff	include/stb_truetype.h	/^    float xoff,yoff,xadvance;$/;"	m	struct:__anon4
+yoff2	include/stb_truetype.h	/^    float xoff2,yoff2;$/;"	m	struct:__anon4

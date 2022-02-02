@@ -1,13 +1,8 @@
 #include <SDL2/SDL.h>
 
-#define internal static
-#define global static
-#define localPersist static
-
-#define true 1
-#define false 0
-
-typedef int b32;
+#define JAI_UTILS_IMPLEMENTATION
+#define JAI_ALLOCATORS_IMPLEMENTATION
+#include "sdl2_main.h"
 
 global b32 running = true; 
 
